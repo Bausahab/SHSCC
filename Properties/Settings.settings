@@ -1,0 +1,72 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="SHSCC.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="Modalities" Type="System.Collections.Specialized.StringCollection" Scope="User">
+      <Value Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;ArrayOfString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;string&gt;approach&lt;/string&gt;
+  &lt;string&gt;bathing after&lt;/string&gt;
+  &lt;string&gt;bathing during&lt;/string&gt;
+  &lt;string&gt;coldair&lt;/string&gt;
+  &lt;string&gt;cover&lt;/string&gt;
+  &lt;string&gt;dampness&lt;/string&gt;
+  &lt;string&gt;During riding&lt;/string&gt;
+  &lt;string&gt;morning rising after&lt;/string&gt;
+  &lt;string&gt;motion&lt;/string&gt;
+  &lt;string&gt;night warmth of bed.&lt;/string&gt;
+  &lt;string&gt;presure riding&lt;/string&gt;
+  &lt;string&gt;rainy weather&lt;/string&gt;
+  &lt;string&gt;rest touch rubbuing&lt;/string&gt;
+  &lt;string&gt;springseasion&lt;/string&gt;
+  &lt;string&gt;storm&lt;/string&gt;
+  &lt;string&gt;summer&lt;/string&gt;
+  &lt;string&gt;Sun heat&lt;/string&gt;
+  &lt;string&gt;uncover&lt;/string&gt;
+  &lt;string&gt;wet&lt;/string&gt;
+  &lt;string&gt;winter&lt;/string&gt;
+&lt;/ArrayOfString&gt;</Value>
+    </Setting>
+    <Setting Name="Symptoms" Type="System.Collections.Specialized.StringCollection" Scope="User">
+      <Value Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;ArrayOfString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;string&gt;Default&lt;/string&gt;
+&lt;/ArrayOfString&gt;</Value>
+    </Setting>
+    <Setting Name="BodyParts" Type="System.Collections.Specialized.StringCollection" Scope="User">
+      <Value Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;ArrayOfString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;string&gt;Default&lt;/string&gt;
+&lt;/ArrayOfString&gt;</Value>
+    </Setting>
+    <Setting Name="Discharge" Type="System.Collections.Specialized.StringCollection" Scope="User">
+      <Value Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;ArrayOfString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;string&gt;Thin&lt;/string&gt;
+  &lt;string&gt;Yellow&lt;/string&gt;
+  &lt;string&gt;Watery&lt;/string&gt;
+  &lt;string&gt;Thick&lt;/string&gt;
+  &lt;string&gt;White&lt;/string&gt;
+&lt;/ArrayOfString&gt;</Value>
+    </Setting>
+    <Setting Name="RegNo" Type="System.UInt64" Scope="User">
+      <Value Profile="(Default)">1</Value>
+    </Setting>
+    <Setting Name="Complaints" Type="System.Collections.Specialized.StringCollection" Scope="User">
+      <Value Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;ArrayOfString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;string&gt;Default&lt;/string&gt;
+  &lt;string&gt;Other&lt;/string&gt;
+&lt;/ArrayOfString&gt;</Value>
+    </Setting>
+    <Setting Name="DefaultDir" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="MenuBackColor" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)">CornflowerBlue</Value>
+    </Setting>
+    <Setting Name="PatID" Type="System.Int64" Scope="User">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
