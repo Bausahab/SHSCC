@@ -175,6 +175,7 @@ namespace SHSCC.OPD.UI.Patient
 
         private void tabPage4_Enter(object sender, EventArgs e)
         {
+            checkedListBox1.Items.Clear();
             checkedListBox1.Items.AddRange(DataModels.AppData.LoadData(DataModels.ModelTypes.Modality));
             //button3.Text = "Save Modalities for:-" + PatientName;
             //Text = "ADDING MODALITIES FOR:" + PatientName;
