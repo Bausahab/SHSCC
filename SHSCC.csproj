@@ -117,6 +117,7 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SHSCCTextDataOperationTasks.cs" />
     <EmbeddedResource Include="FrmSHSC.resx">
       <DependentUpon>FrmSHSC.cs</DependentUpon>
     </EmbeddedResource>

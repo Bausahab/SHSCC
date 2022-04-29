@@ -42,7 +42,7 @@ namespace SHSCC.OPD.UI.AppUI
             Properties.Settings.Default.DefaultDir = txtDataLocation.Text;
             Properties.Settings.Default.Save();
             //checking if datapath exist
-            if (Program.DataExist())
+            if(SHSCCTextDataOperationTasks.DataExist().GetAwaiter().GetResult())
                 AppStartClicked?.Invoke(this, null);
             else
                 MessageBox.Show("Given DataPath is Unavailable,Please select correct data location");
