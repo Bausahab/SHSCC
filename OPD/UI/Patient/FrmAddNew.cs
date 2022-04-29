@@ -113,7 +113,7 @@ namespace SHSCC.OPD.UI.Patient
                  Invoke(new Action(() =>
                  {
                      tabControl1.Enabled = true;
-                     btnAddPatDtl.Enabled = false;
+                     btnSave.Enabled = false;
                      CurrentPatientID = patentoadd.ID;
                  }));
              });
@@ -276,6 +276,11 @@ namespace SHSCC.OPD.UI.Patient
             //    dbcontext.SaveChanges();
             //    MessageBox.Show(patentoadd.Name + "Saved");
             //}
+        }
+
+        private void tbpulse_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 

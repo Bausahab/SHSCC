@@ -55,7 +55,8 @@ namespace SHSCC
             // menuStrip1
             // 
             this.menuStrip1.BackColor = System.Drawing.Color.White;
-            this.menuStrip1.Font = new System.Drawing.Font("Segoe UI Black", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.menuStrip1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.newToolStripMenuItem,
             this.viewToolStripMenuItem,
@@ -64,7 +65,8 @@ namespace SHSCC
             this.settingToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(798, 53);
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(8, 2, 0, 2);
+            this.menuStrip1.Size = new System.Drawing.Size(1176, 28);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -74,13 +76,13 @@ namespace SHSCC
             this.patientToolStripMenuItem});
             this.newToolStripMenuItem.ForeColor = System.Drawing.Color.DarkMagenta;
             this.newToolStripMenuItem.Name = "newToolStripMenuItem";
-            this.newToolStripMenuItem.Size = new System.Drawing.Size(103, 49);
+            this.newToolStripMenuItem.Size = new System.Drawing.Size(53, 24);
             this.newToolStripMenuItem.Text = "&New";
             // 
             // patientToolStripMenuItem
             // 
             this.patientToolStripMenuItem.Name = "patientToolStripMenuItem";
-            this.patientToolStripMenuItem.Size = new System.Drawing.Size(213, 50);
+            this.patientToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.patientToolStripMenuItem.Text = "&Patient";
             this.patientToolStripMenuItem.Click += new System.EventHandler(this.patientToolStripMenuItem_Click);
             // 
@@ -91,19 +93,19 @@ namespace SHSCC
             this.appointmentsToolStripMenuItem});
             this.viewToolStripMenuItem.ForeColor = System.Drawing.Color.DarkMagenta;
             this.viewToolStripMenuItem.Name = "viewToolStripMenuItem";
-            this.viewToolStripMenuItem.Size = new System.Drawing.Size(109, 49);
+            this.viewToolStripMenuItem.Size = new System.Drawing.Size(55, 24);
             this.viewToolStripMenuItem.Text = "&View";
             // 
             // patientToolStripMenuItem1
             // 
             this.patientToolStripMenuItem1.Name = "patientToolStripMenuItem1";
-            this.patientToolStripMenuItem1.Size = new System.Drawing.Size(325, 50);
+            this.patientToolStripMenuItem1.Size = new System.Drawing.Size(224, 26);
             this.patientToolStripMenuItem1.Text = "&Patient";
             // 
             // appointmentsToolStripMenuItem
             // 
             this.appointmentsToolStripMenuItem.Name = "appointmentsToolStripMenuItem";
-            this.appointmentsToolStripMenuItem.Size = new System.Drawing.Size(325, 50);
+            this.appointmentsToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.appointmentsToolStripMenuItem.Text = "&Appointments";
             // 
             // updateToolStripMenuItem
@@ -113,20 +115,20 @@ namespace SHSCC
             this.appointmentsToolStripMenuItem1});
             this.updateToolStripMenuItem.ForeColor = System.Drawing.Color.DarkMagenta;
             this.updateToolStripMenuItem.Name = "updateToolStripMenuItem";
-            this.updateToolStripMenuItem.Size = new System.Drawing.Size(147, 49);
+            this.updateToolStripMenuItem.Size = new System.Drawing.Size(72, 24);
             this.updateToolStripMenuItem.Text = "&Update";
             // 
             // patientToolStripMenuItem2
             // 
             this.patientToolStripMenuItem2.Name = "patientToolStripMenuItem2";
-            this.patientToolStripMenuItem2.Size = new System.Drawing.Size(325, 50);
+            this.patientToolStripMenuItem2.Size = new System.Drawing.Size(224, 26);
             this.patientToolStripMenuItem2.Text = "&Patient";
             this.patientToolStripMenuItem2.Click += new System.EventHandler(this.patientToolStripMenuItem2_Click);
             // 
             // appointmentsToolStripMenuItem1
             // 
             this.appointmentsToolStripMenuItem1.Name = "appointmentsToolStripMenuItem1";
-            this.appointmentsToolStripMenuItem1.Size = new System.Drawing.Size(325, 50);
+            this.appointmentsToolStripMenuItem1.Size = new System.Drawing.Size(224, 26);
             this.appointmentsToolStripMenuItem1.Text = "&Appointments";
             // 
             // dataToolStripMenuItem
@@ -138,31 +140,31 @@ namespace SHSCC
             this.synchronizeToolStripMenuItem});
             this.dataToolStripMenuItem.ForeColor = System.Drawing.Color.DarkMagenta;
             this.dataToolStripMenuItem.Name = "dataToolStripMenuItem";
-            this.dataToolStripMenuItem.Size = new System.Drawing.Size(105, 49);
+            this.dataToolStripMenuItem.Size = new System.Drawing.Size(55, 24);
             this.dataToolStripMenuItem.Text = "&Data";
             // 
             // questionToolStripMenuItem
             // 
             this.questionToolStripMenuItem.Name = "questionToolStripMenuItem";
-            this.questionToolStripMenuItem.Size = new System.Drawing.Size(290, 50);
+            this.questionToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.questionToolStripMenuItem.Text = "&Question";
             // 
             // applicationToolStripMenuItem
             // 
             this.applicationToolStripMenuItem.Name = "applicationToolStripMenuItem";
-            this.applicationToolStripMenuItem.Size = new System.Drawing.Size(290, 50);
+            this.applicationToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.applicationToolStripMenuItem.Text = "&Application";
             // 
             // backupToolStripMenuItem
             // 
             this.backupToolStripMenuItem.Name = "backupToolStripMenuItem";
-            this.backupToolStripMenuItem.Size = new System.Drawing.Size(290, 50);
+            this.backupToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.backupToolStripMenuItem.Text = "&Backup";
             // 
             // synchronizeToolStripMenuItem
             // 
             this.synchronizeToolStripMenuItem.Name = "synchronizeToolStripMenuItem";
-            this.synchronizeToolStripMenuItem.Size = new System.Drawing.Size(290, 50);
+            this.synchronizeToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.synchronizeToolStripMenuItem.Text = "&Synchronize";
             // 
             // settingToolStripMenuItem
@@ -174,43 +176,44 @@ namespace SHSCC
             this.applicationToolStripMenuItem1});
             this.settingToolStripMenuItem.ForeColor = System.Drawing.Color.DarkMagenta;
             this.settingToolStripMenuItem.Name = "settingToolStripMenuItem";
-            this.settingToolStripMenuItem.Size = new System.Drawing.Size(145, 49);
+            this.settingToolStripMenuItem.Size = new System.Drawing.Size(70, 24);
             this.settingToolStripMenuItem.Text = "&Setting";
             // 
             // displayToolStripMenuItem
             // 
             this.displayToolStripMenuItem.Name = "displayToolStripMenuItem";
-            this.displayToolStripMenuItem.Size = new System.Drawing.Size(283, 50);
+            this.displayToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.displayToolStripMenuItem.Text = "&Display";
             // 
             // patientToolStripMenuItem3
             // 
             this.patientToolStripMenuItem3.Name = "patientToolStripMenuItem3";
-            this.patientToolStripMenuItem3.Size = new System.Drawing.Size(283, 50);
+            this.patientToolStripMenuItem3.Size = new System.Drawing.Size(224, 26);
             this.patientToolStripMenuItem3.Text = "&Patient";
             // 
             // accountToolStripMenuItem
             // 
             this.accountToolStripMenuItem.Name = "accountToolStripMenuItem";
-            this.accountToolStripMenuItem.Size = new System.Drawing.Size(283, 50);
+            this.accountToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.accountToolStripMenuItem.Text = "&Account";
             // 
             // applicationToolStripMenuItem1
             // 
             this.applicationToolStripMenuItem1.Name = "applicationToolStripMenuItem1";
-            this.applicationToolStripMenuItem1.Size = new System.Drawing.Size(283, 50);
+            this.applicationToolStripMenuItem1.Size = new System.Drawing.Size(224, 26);
             this.applicationToolStripMenuItem1.Text = "&Application";
             // 
             // FrmSHSC
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(798, 480);
+            this.ClientSize = new System.Drawing.Size(1176, 710);
             this.Controls.Add(this.menuStrip1);
             this.DoubleBuffered = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip1;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "FrmSHSC";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SHSC-CENTER";
