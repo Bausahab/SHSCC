@@ -15,15 +15,31 @@ namespace SHSCC
 
         OPD.UI.AppUI.FrmHome homepage;
         OPD.UI.Patient.FrmAddNew adnew;
+        OPD.UI.AppUI.FrmStartup startup;
         public FrmSHSC()
         {
             InitializeComponent();
-           
+            startup = new OPD.UI.AppUI.FrmStartup();
+            startup.AppStartClicked = AppStartRequested;
+        }
+
+        private void AppStartRequested(object sender, EventArgs e)
+        {
+
+            this.Controls.Remove(startup);
+            ShowHomePage();
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            ShowHomePage();
+            ShowStartUpPage();
+           
+        }
+        void ShowStartUpPage()
+        {
+            
+            startup.MdiParent = this;
+            startup.Show();
         }
        void ShowHomePage()
         {

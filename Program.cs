@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using System.Windows.Forms;
 
 namespace SHSCC
@@ -15,6 +16,13 @@ namespace SHSCC
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new FrmSHSC());
         }
+        public static bool DataExist()
+        {
+
+            return Directory.Exists(Properties.Settings.Default.DefaultDir);
+           
+        }
+       
     }
    
     
