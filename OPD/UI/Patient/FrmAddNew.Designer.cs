@@ -172,10 +172,11 @@ namespace SHSCC.OPD.UI.Patient
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Controls.Add(this.tabPage5);
             this.tabControl1.Font = new System.Drawing.Font("Arial Narrow", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabControl1.Location = new System.Drawing.Point(12, 110);
+            this.tabControl1.Location = new System.Drawing.Point(16, 135);
+            this.tabControl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(843, 411);
+            this.tabControl1.Size = new System.Drawing.Size(1124, 506);
             this.tabControl1.TabIndex = 0;
             // 
             // tabPage1
@@ -196,19 +197,21 @@ namespace SHSCC.OPD.UI.Patient
             this.tabPage1.Controls.Add(this.label6);
             this.tabPage1.Controls.Add(this.label5);
             this.tabPage1.Controls.Add(this.label4);
-            this.tabPage1.Location = new System.Drawing.Point(4, 41);
+            this.tabPage1.Location = new System.Drawing.Point(4, 47);
+            this.tabPage1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(835, 366);
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage1.Size = new System.Drawing.Size(1116, 455);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Registraion Details";
             // 
             // btnSaveRegDtl
             // 
             this.btnSaveRegDtl.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnSaveRegDtl.Location = new System.Drawing.Point(609, 301);
+            this.btnSaveRegDtl.Location = new System.Drawing.Point(812, 370);
+            this.btnSaveRegDtl.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnSaveRegDtl.Name = "btnSaveRegDtl";
-            this.btnSaveRegDtl.Size = new System.Drawing.Size(220, 49);
+            this.btnSaveRegDtl.Size = new System.Drawing.Size(293, 60);
             this.btnSaveRegDtl.TabIndex = 188;
             this.btnSaveRegDtl.Text = "SAVE DETAILS";
             this.btnSaveRegDtl.UseVisualStyleBackColor = true;
@@ -217,18 +220,20 @@ namespace SHSCC.OPD.UI.Patient
             // pictureBox1
             // 
             this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox1.Location = new System.Drawing.Point(437, 45);
+            this.pictureBox1.Location = new System.Drawing.Point(583, 55);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(161, 176);
+            this.pictureBox1.Size = new System.Drawing.Size(214, 216);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 48;
             this.pictureBox1.TabStop = false;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(436, 230);
+            this.button1.Location = new System.Drawing.Point(581, 283);
+            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(161, 37);
+            this.button1.Size = new System.Drawing.Size(215, 46);
             this.button1.TabIndex = 47;
             this.button1.Text = "Patient Photo";
             this.button1.UseVisualStyleBackColor = true;
@@ -238,9 +243,10 @@ namespace SHSCC.OPD.UI.Patient
             // 
             this.tbAdahr.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tbAdahr.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbAdahr.Location = new System.Drawing.Point(211, 100);
+            this.tbAdahr.Location = new System.Drawing.Point(281, 123);
+            this.tbAdahr.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tbAdahr.Name = "tbAdahr";
-            this.tbAdahr.Size = new System.Drawing.Size(203, 26);
+            this.tbAdahr.Size = new System.Drawing.Size(270, 30);
             this.tbAdahr.TabIndex = 46;
             // 
             // label22
@@ -248,9 +254,10 @@ namespace SHSCC.OPD.UI.Patient
             this.label22.AutoSize = true;
             this.label22.Font = new System.Drawing.Font("Arial Narrow", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label22.ForeColor = System.Drawing.Color.Black;
-            this.label22.Location = new System.Drawing.Point(69, 89);
+            this.label22.Location = new System.Drawing.Point(92, 110);
+            this.label22.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(131, 37);
+            this.label22.Size = new System.Drawing.Size(164, 46);
             this.label22.TabIndex = 45;
             this.label22.Text = "AADHAR";
             // 
@@ -258,9 +265,10 @@ namespace SHSCC.OPD.UI.Patient
             // 
             this.tbCo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tbCo.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbCo.Location = new System.Drawing.Point(211, 41);
+            this.tbCo.Location = new System.Drawing.Point(281, 50);
+            this.tbCo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tbCo.Name = "tbCo";
-            this.tbCo.Size = new System.Drawing.Size(204, 26);
+            this.tbCo.Size = new System.Drawing.Size(271, 30);
             this.tbCo.TabIndex = 44;
             // 
             // label21
@@ -268,9 +276,10 @@ namespace SHSCC.OPD.UI.Patient
             this.label21.AutoSize = true;
             this.label21.Font = new System.Drawing.Font("Arial Narrow", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label21.ForeColor = System.Drawing.Color.Black;
-            this.label21.Location = new System.Drawing.Point(70, 41);
+            this.label21.Location = new System.Drawing.Point(93, 50);
+            this.label21.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(63, 37);
+            this.label21.Size = new System.Drawing.Size(79, 46);
             this.label21.TabIndex = 43;
             this.label21.Text = "C/O";
             // 
@@ -278,19 +287,21 @@ namespace SHSCC.OPD.UI.Patient
             // 
             this.tbcont.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tbcont.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbcont.Location = new System.Drawing.Point(212, 243);
+            this.tbcont.Location = new System.Drawing.Point(283, 299);
+            this.tbcont.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tbcont.Name = "tbcont";
-            this.tbcont.Size = new System.Drawing.Size(202, 26);
+            this.tbcont.Size = new System.Drawing.Size(269, 30);
             this.tbcont.TabIndex = 41;
             // 
             // tbaddress
             // 
             this.tbaddress.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tbaddress.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbaddress.Location = new System.Drawing.Point(212, 292);
+            this.tbaddress.Location = new System.Drawing.Point(283, 359);
+            this.tbaddress.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tbaddress.Multiline = true;
             this.tbaddress.Name = "tbaddress";
-            this.tbaddress.Size = new System.Drawing.Size(206, 49);
+            this.tbaddress.Size = new System.Drawing.Size(274, 60);
             this.tbaddress.TabIndex = 42;
             // 
             // cbgen
@@ -302,15 +313,17 @@ namespace SHSCC.OPD.UI.Patient
             "Male",
             "Female",
             "Other"});
-            this.cbgen.Location = new System.Drawing.Point(211, 148);
+            this.cbgen.Location = new System.Drawing.Point(281, 182);
+            this.cbgen.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cbgen.Name = "cbgen";
-            this.cbgen.Size = new System.Drawing.Size(91, 28);
+            this.cbgen.Size = new System.Drawing.Size(120, 32);
             this.cbgen.TabIndex = 39;
             // 
             // numericUpDownAge
             // 
             this.numericUpDownAge.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDownAge.Location = new System.Drawing.Point(211, 196);
+            this.numericUpDownAge.Location = new System.Drawing.Point(281, 241);
+            this.numericUpDownAge.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.numericUpDownAge.Maximum = new decimal(new int[] {
             150,
             0,
@@ -322,7 +335,7 @@ namespace SHSCC.OPD.UI.Patient
             0,
             0});
             this.numericUpDownAge.Name = "numericUpDownAge";
-            this.numericUpDownAge.Size = new System.Drawing.Size(88, 26);
+            this.numericUpDownAge.Size = new System.Drawing.Size(117, 30);
             this.numericUpDownAge.TabIndex = 40;
             this.numericUpDownAge.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.numericUpDownAge.Value = new decimal(new int[] {
@@ -336,9 +349,10 @@ namespace SHSCC.OPD.UI.Patient
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Arial Narrow", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.Black;
-            this.label7.Location = new System.Drawing.Point(72, 283);
+            this.label7.Location = new System.Drawing.Point(96, 348);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(123, 37);
+            this.label7.Size = new System.Drawing.Size(151, 46);
             this.label7.TabIndex = 38;
             this.label7.Text = "Address";
             // 
@@ -347,9 +361,10 @@ namespace SHSCC.OPD.UI.Patient
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Arial Narrow", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.Black;
-            this.label6.Location = new System.Drawing.Point(72, 232);
+            this.label6.Location = new System.Drawing.Point(96, 286);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(116, 37);
+            this.label6.Size = new System.Drawing.Size(142, 46);
             this.label6.TabIndex = 37;
             this.label6.Text = "Contact";
             // 
@@ -358,9 +373,10 @@ namespace SHSCC.OPD.UI.Patient
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Arial Narrow", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.Black;
-            this.label5.Location = new System.Drawing.Point(72, 184);
+            this.label5.Location = new System.Drawing.Point(96, 226);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(67, 37);
+            this.label5.Size = new System.Drawing.Size(82, 46);
             this.label5.TabIndex = 36;
             this.label5.Text = "Age";
             // 
@@ -369,9 +385,10 @@ namespace SHSCC.OPD.UI.Patient
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Arial Narrow", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(70, 141);
+            this.label4.Location = new System.Drawing.Point(93, 174);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(109, 37);
+            this.label4.Size = new System.Drawing.Size(135, 46);
             this.label4.TabIndex = 35;
             this.label4.Text = "Gender";
             // 
@@ -401,10 +418,11 @@ namespace SHSCC.OPD.UI.Patient
             this.tabPage3.Controls.Add(this.Cbburn);
             this.tabPage3.Controls.Add(this.label18);
             this.tabPage3.Controls.Add(this.Cbpain);
-            this.tabPage3.Location = new System.Drawing.Point(4, 41);
+            this.tabPage3.Location = new System.Drawing.Point(4, 47);
+            this.tabPage3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(835, 366);
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage3.Size = new System.Drawing.Size(1116, 455);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Diagonstics Details";
             this.tabPage3.Click += new System.EventHandler(this.tabPage3_Click);
@@ -412,9 +430,10 @@ namespace SHSCC.OPD.UI.Patient
             // btnSaveDiaDtl
             // 
             this.btnSaveDiaDtl.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnSaveDiaDtl.Location = new System.Drawing.Point(609, 310);
+            this.btnSaveDiaDtl.Location = new System.Drawing.Point(812, 382);
+            this.btnSaveDiaDtl.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnSaveDiaDtl.Name = "btnSaveDiaDtl";
-            this.btnSaveDiaDtl.Size = new System.Drawing.Size(220, 49);
+            this.btnSaveDiaDtl.Size = new System.Drawing.Size(293, 60);
             this.btnSaveDiaDtl.TabIndex = 192;
             this.btnSaveDiaDtl.Text = "SAVE DETAILS";
             this.btnSaveDiaDtl.UseVisualStyleBackColor = true;
@@ -424,10 +443,11 @@ namespace SHSCC.OPD.UI.Patient
             // 
             this.tbRptSumery.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tbRptSumery.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbRptSumery.Location = new System.Drawing.Point(24, 68);
+            this.tbRptSumery.Location = new System.Drawing.Point(32, 84);
+            this.tbRptSumery.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tbRptSumery.Multiline = true;
             this.tbRptSumery.Name = "tbRptSumery";
-            this.tbRptSumery.Size = new System.Drawing.Size(253, 80);
+            this.tbRptSumery.Size = new System.Drawing.Size(337, 98);
             this.tbRptSumery.TabIndex = 191;
             this.tbRptSumery.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -436,9 +456,10 @@ namespace SHSCC.OPD.UI.Patient
             this.label25.AutoSize = true;
             this.label25.Font = new System.Drawing.Font("Arial Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label25.ForeColor = System.Drawing.Color.Black;
-            this.label25.Location = new System.Drawing.Point(20, 42);
+            this.label25.Location = new System.Drawing.Point(27, 52);
+            this.label25.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(159, 23);
+            this.label25.Size = new System.Drawing.Size(195, 28);
             this.label25.TabIndex = 190;
             this.label25.Text = "Report Summery";
             // 
@@ -446,9 +467,10 @@ namespace SHSCC.OPD.UI.Patient
             // 
             this.tbComplaintSince.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tbComplaintSince.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbComplaintSince.Location = new System.Drawing.Point(372, 23);
+            this.tbComplaintSince.Location = new System.Drawing.Point(496, 28);
+            this.tbComplaintSince.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tbComplaintSince.Name = "tbComplaintSince";
-            this.tbComplaintSince.Size = new System.Drawing.Size(270, 26);
+            this.tbComplaintSince.Size = new System.Drawing.Size(359, 30);
             this.tbComplaintSince.TabIndex = 189;
             this.tbComplaintSince.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -457,9 +479,10 @@ namespace SHSCC.OPD.UI.Patient
             this.label24.AutoSize = true;
             this.label24.Font = new System.Drawing.Font("Arial Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label24.ForeColor = System.Drawing.Color.Black;
-            this.label24.Location = new System.Drawing.Point(192, 23);
+            this.label24.Location = new System.Drawing.Point(256, 28);
+            this.label24.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(154, 23);
+            this.label24.Size = new System.Drawing.Size(190, 28);
             this.label24.TabIndex = 188;
             this.label24.Text = "Complaint Since";
             // 
@@ -468,9 +491,10 @@ namespace SHSCC.OPD.UI.Patient
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Arial Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.ForeColor = System.Drawing.Color.Black;
-            this.label15.Location = new System.Drawing.Point(408, 206);
+            this.label15.Location = new System.Drawing.Point(544, 254);
+            this.label15.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(97, 23);
+            this.label15.Size = new System.Drawing.Size(119, 28);
             this.label15.TabIndex = 186;
             this.label15.Text = "Body Part";
             // 
@@ -479,19 +503,21 @@ namespace SHSCC.OPD.UI.Patient
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label17.ForeColor = System.Drawing.Color.Black;
-            this.label17.Location = new System.Drawing.Point(281, 272);
+            this.label17.Location = new System.Drawing.Point(375, 335);
+            this.label17.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(118, 19);
+            this.label17.Size = new System.Drawing.Size(145, 24);
             this.label17.TabIndex = 185;
             this.label17.Text = "Family History";
             // 
             // tbFamHis
             // 
             this.tbFamHis.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbFamHis.Location = new System.Drawing.Point(285, 294);
+            this.tbFamHis.Location = new System.Drawing.Point(380, 362);
+            this.tbFamHis.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tbFamHis.Multiline = true;
             this.tbFamHis.Name = "tbFamHis";
-            this.tbFamHis.Size = new System.Drawing.Size(228, 42);
+            this.tbFamHis.Size = new System.Drawing.Size(303, 51);
             this.tbFamHis.TabIndex = 184;
             // 
             // groupBox3
@@ -506,9 +532,11 @@ namespace SHSCC.OPD.UI.Patient
             this.groupBox3.Controls.Add(this.tbpulse);
             this.groupBox3.Controls.Add(this.label10);
             this.groupBox3.Controls.Add(this.label9);
-            this.groupBox3.Location = new System.Drawing.Point(24, 153);
+            this.groupBox3.Location = new System.Drawing.Point(32, 188);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(197, 206);
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox3.Size = new System.Drawing.Size(263, 254);
             this.groupBox3.TabIndex = 183;
             this.groupBox3.TabStop = false;
             // 
@@ -517,18 +545,20 @@ namespace SHSCC.OPD.UI.Patient
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.Black;
-            this.label8.Location = new System.Drawing.Point(134, 141);
+            this.label8.Location = new System.Drawing.Point(179, 174);
+            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(26, 20);
+            this.label8.Size = new System.Drawing.Size(32, 24);
             this.label8.TabIndex = 105;
             this.label8.Text = "Kg";
             // 
             // btnAddscab
             // 
             this.btnAddscab.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddscab.Location = new System.Drawing.Point(143, 37);
+            this.btnAddscab.Location = new System.Drawing.Point(191, 46);
+            this.btnAddscab.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnAddscab.Name = "btnAddscab";
-            this.btnAddscab.Size = new System.Drawing.Size(21, 32);
+            this.btnAddscab.Size = new System.Drawing.Size(28, 39);
             this.btnAddscab.TabIndex = 104;
             this.btnAddscab.Text = "+";
             this.btnAddscab.UseVisualStyleBackColor = true;
@@ -542,18 +572,20 @@ namespace SHSCC.OPD.UI.Patient
             this.Cbscab.Items.AddRange(new object[] {
             "Thik",
             "Thin"});
-            this.Cbscab.Location = new System.Drawing.Point(66, 37);
+            this.Cbscab.Location = new System.Drawing.Point(88, 46);
+            this.Cbscab.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Cbscab.Name = "Cbscab";
-            this.Cbscab.Size = new System.Drawing.Size(73, 28);
+            this.Cbscab.Size = new System.Drawing.Size(96, 32);
             this.Cbscab.TabIndex = 97;
             // 
             // tbwate
             // 
             this.tbwate.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tbwate.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbwate.Location = new System.Drawing.Point(66, 139);
+            this.tbwate.Location = new System.Drawing.Point(88, 171);
+            this.tbwate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tbwate.Name = "tbwate";
-            this.tbwate.Size = new System.Drawing.Size(62, 26);
+            this.tbwate.Size = new System.Drawing.Size(82, 30);
             this.tbwate.TabIndex = 95;
             this.tbwate.Text = "50";
             this.tbwate.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -563,9 +595,10 @@ namespace SHSCC.OPD.UI.Patient
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.Color.Black;
-            this.label12.Location = new System.Drawing.Point(9, 141);
+            this.label12.Location = new System.Drawing.Point(12, 174);
+            this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(51, 20);
+            this.label12.Size = new System.Drawing.Size(63, 24);
             this.label12.TabIndex = 94;
             this.label12.Text = "Weight";
             // 
@@ -573,9 +606,10 @@ namespace SHSCC.OPD.UI.Patient
             // 
             this.tbbp.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tbbp.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbbp.Location = new System.Drawing.Point(66, 105);
+            this.tbbp.Location = new System.Drawing.Point(88, 129);
+            this.tbbp.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tbbp.Name = "tbbp";
-            this.tbbp.Size = new System.Drawing.Size(98, 26);
+            this.tbbp.Size = new System.Drawing.Size(130, 30);
             this.tbbp.TabIndex = 93;
             this.tbbp.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -584,9 +618,10 @@ namespace SHSCC.OPD.UI.Patient
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.Black;
-            this.label11.Location = new System.Drawing.Point(18, 111);
+            this.label11.Location = new System.Drawing.Point(24, 137);
+            this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(27, 20);
+            this.label11.Size = new System.Drawing.Size(33, 24);
             this.label11.TabIndex = 92;
             this.label11.Text = "BP";
             // 
@@ -594,9 +629,10 @@ namespace SHSCC.OPD.UI.Patient
             // 
             this.tbpulse.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tbpulse.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbpulse.Location = new System.Drawing.Point(66, 75);
+            this.tbpulse.Location = new System.Drawing.Point(88, 92);
+            this.tbpulse.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tbpulse.Name = "tbpulse";
-            this.tbpulse.Size = new System.Drawing.Size(98, 26);
+            this.tbpulse.Size = new System.Drawing.Size(130, 30);
             this.tbpulse.TabIndex = 91;
             this.tbpulse.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -605,9 +641,10 @@ namespace SHSCC.OPD.UI.Patient
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.Black;
-            this.label10.Location = new System.Drawing.Point(9, 77);
+            this.label10.Location = new System.Drawing.Point(12, 95);
+            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(44, 20);
+            this.label10.Size = new System.Drawing.Size(53, 24);
             this.label10.TabIndex = 90;
             this.label10.Text = "Pulse";
             // 
@@ -616,9 +653,10 @@ namespace SHSCC.OPD.UI.Patient
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.Black;
-            this.label9.Location = new System.Drawing.Point(13, 47);
+            this.label9.Location = new System.Drawing.Point(17, 58);
+            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(40, 20);
+            this.label9.Size = new System.Drawing.Size(49, 24);
             this.label9.TabIndex = 88;
             this.label9.Text = "Scab";
             // 
@@ -627,9 +665,10 @@ namespace SHSCC.OPD.UI.Patient
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Arial Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label16.ForeColor = System.Drawing.Color.Black;
-            this.label16.Location = new System.Drawing.Point(402, 137);
+            this.label16.Location = new System.Drawing.Point(536, 169);
+            this.label16.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(99, 23);
+            this.label16.Size = new System.Drawing.Size(121, 28);
             this.label16.TabIndex = 182;
             this.label16.Text = "Discharge";
             // 
@@ -638,18 +677,20 @@ namespace SHSCC.OPD.UI.Patient
             this.label20.AutoSize = true;
             this.label20.Font = new System.Drawing.Font("Arial Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label20.ForeColor = System.Drawing.Color.Black;
-            this.label20.Location = new System.Drawing.Point(390, 68);
+            this.label20.Location = new System.Drawing.Point(520, 84);
+            this.label20.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(148, 23);
+            this.label20.Size = new System.Drawing.Size(182, 28);
             this.label20.TabIndex = 181;
             this.label20.Text = "Complaint Type";
             // 
             // btnAdBody
             // 
             this.btnAdBody.Font = new System.Drawing.Font("Arial Black", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAdBody.Location = new System.Drawing.Point(521, 224);
+            this.btnAdBody.Location = new System.Drawing.Point(695, 276);
+            this.btnAdBody.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnAdBody.Name = "btnAdBody";
-            this.btnAdBody.Size = new System.Drawing.Size(21, 38);
+            this.btnAdBody.Size = new System.Drawing.Size(28, 47);
             this.btnAdBody.TabIndex = 180;
             this.btnAdBody.Text = "+";
             this.btnAdBody.UseVisualStyleBackColor = true;
@@ -658,9 +699,10 @@ namespace SHSCC.OPD.UI.Patient
             // btnAddDis
             // 
             this.btnAddDis.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddDis.Location = new System.Drawing.Point(521, 157);
+            this.btnAddDis.Location = new System.Drawing.Point(695, 193);
+            this.btnAddDis.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnAddDis.Name = "btnAddDis";
-            this.btnAddDis.Size = new System.Drawing.Size(21, 41);
+            this.btnAddDis.Size = new System.Drawing.Size(28, 50);
             this.btnAddDis.TabIndex = 179;
             this.btnAddDis.Text = "+";
             this.btnAddDis.UseVisualStyleBackColor = true;
@@ -669,9 +711,10 @@ namespace SHSCC.OPD.UI.Patient
             // btnAddComp
             // 
             this.btnAddComp.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddComp.Location = new System.Drawing.Point(521, 96);
+            this.btnAddComp.Location = new System.Drawing.Point(695, 118);
+            this.btnAddComp.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnAddComp.Name = "btnAddComp";
-            this.btnAddComp.Size = new System.Drawing.Size(21, 41);
+            this.btnAddComp.Size = new System.Drawing.Size(28, 50);
             this.btnAddComp.TabIndex = 178;
             this.btnAddComp.Text = "+";
             this.btnAddComp.UseVisualStyleBackColor = true;
@@ -682,9 +725,10 @@ namespace SHSCC.OPD.UI.Patient
             this.CbDis.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CbDis.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CbDis.FormattingEnabled = true;
-            this.CbDis.Location = new System.Drawing.Point(392, 165);
+            this.CbDis.Location = new System.Drawing.Point(523, 203);
+            this.CbDis.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.CbDis.Name = "CbDis";
-            this.CbDis.Size = new System.Drawing.Size(123, 28);
+            this.CbDis.Size = new System.Drawing.Size(163, 32);
             this.CbDis.TabIndex = 177;
             this.CbDis.DropDown += new System.EventHandler(this.CbDis_DropDown);
             // 
@@ -693,9 +737,10 @@ namespace SHSCC.OPD.UI.Patient
             this.CbBody.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CbBody.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CbBody.FormattingEnabled = true;
-            this.CbBody.Location = new System.Drawing.Point(392, 232);
+            this.CbBody.Location = new System.Drawing.Point(523, 286);
+            this.CbBody.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.CbBody.Name = "CbBody";
-            this.CbBody.Size = new System.Drawing.Size(121, 30);
+            this.CbBody.Size = new System.Drawing.Size(160, 37);
             this.CbBody.TabIndex = 176;
             this.CbBody.DropDown += new System.EventHandler(this.CbBody_DropDown);
             // 
@@ -704,9 +749,10 @@ namespace SHSCC.OPD.UI.Patient
             this.CbComp.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CbComp.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CbComp.FormattingEnabled = true;
-            this.CbComp.Location = new System.Drawing.Point(392, 103);
+            this.CbComp.Location = new System.Drawing.Point(523, 127);
+            this.CbComp.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.CbComp.Name = "CbComp";
-            this.CbComp.Size = new System.Drawing.Size(123, 28);
+            this.CbComp.Size = new System.Drawing.Size(163, 32);
             this.CbComp.TabIndex = 175;
             this.CbComp.DropDown += new System.EventHandler(this.CbComp_DropDown);
             // 
@@ -715,9 +761,10 @@ namespace SHSCC.OPD.UI.Patient
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Arial Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.ForeColor = System.Drawing.Color.Black;
-            this.label13.Location = new System.Drawing.Point(281, 206);
+            this.label13.Location = new System.Drawing.Point(375, 254);
+            this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(86, 23);
+            this.label13.Size = new System.Drawing.Size(104, 28);
             this.label13.TabIndex = 174;
             this.label13.Text = "Redness";
             // 
@@ -729,9 +776,10 @@ namespace SHSCC.OPD.UI.Patient
             this.Cbredness.Items.AddRange(new object[] {
             "Yes",
             "No"});
-            this.Cbredness.Location = new System.Drawing.Point(285, 232);
+            this.Cbredness.Location = new System.Drawing.Point(380, 286);
+            this.Cbredness.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Cbredness.Name = "Cbredness";
-            this.Cbredness.Size = new System.Drawing.Size(84, 30);
+            this.Cbredness.Size = new System.Drawing.Size(111, 37);
             this.Cbredness.TabIndex = 173;
             // 
             // label14
@@ -739,9 +787,10 @@ namespace SHSCC.OPD.UI.Patient
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Arial Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.ForeColor = System.Drawing.Color.Black;
-            this.label14.Location = new System.Drawing.Point(281, 143);
+            this.label14.Location = new System.Drawing.Point(375, 176);
+            this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(79, 23);
+            this.label14.Size = new System.Drawing.Size(97, 28);
             this.label14.TabIndex = 172;
             this.label14.Text = "Burning";
             // 
@@ -753,9 +802,10 @@ namespace SHSCC.OPD.UI.Patient
             this.Cbburn.Items.AddRange(new object[] {
             "Yes",
             "No"});
-            this.Cbburn.Location = new System.Drawing.Point(285, 169);
+            this.Cbburn.Location = new System.Drawing.Point(380, 208);
+            this.Cbburn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Cbburn.Name = "Cbburn";
-            this.Cbburn.Size = new System.Drawing.Size(84, 30);
+            this.Cbburn.Size = new System.Drawing.Size(111, 37);
             this.Cbburn.TabIndex = 171;
             // 
             // label18
@@ -763,9 +813,10 @@ namespace SHSCC.OPD.UI.Patient
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("Arial Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label18.ForeColor = System.Drawing.Color.Black;
-            this.label18.Location = new System.Drawing.Point(281, 68);
+            this.label18.Location = new System.Drawing.Point(375, 84);
+            this.label18.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(49, 23);
+            this.label18.Size = new System.Drawing.Size(59, 28);
             this.label18.TabIndex = 170;
             this.label18.Text = "Pain";
             // 
@@ -777,19 +828,21 @@ namespace SHSCC.OPD.UI.Patient
             this.Cbpain.Items.AddRange(new object[] {
             "Yes",
             "No"});
-            this.Cbpain.Location = new System.Drawing.Point(285, 103);
+            this.Cbpain.Location = new System.Drawing.Point(380, 127);
+            this.Cbpain.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Cbpain.Name = "Cbpain";
-            this.Cbpain.Size = new System.Drawing.Size(84, 30);
+            this.Cbpain.Size = new System.Drawing.Size(111, 37);
             this.Cbpain.TabIndex = 169;
             this.Cbpain.DropDown += new System.EventHandler(this.Cbpain_DropDown);
             // 
             // tabPage4
             // 
             this.tabPage4.Controls.Add(this.splitContainer1);
-            this.tabPage4.Location = new System.Drawing.Point(4, 41);
+            this.tabPage4.Location = new System.Drawing.Point(4, 47);
+            this.tabPage4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(835, 366);
+            this.tabPage4.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage4.Size = new System.Drawing.Size(1116, 455);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Modalities";
             this.tabPage4.UseVisualStyleBackColor = true;
@@ -800,7 +853,8 @@ namespace SHSCC.OPD.UI.Patient
             this.splitContainer1.BackColor = System.Drawing.Color.DarkSeaGreen;
             this.splitContainer1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer1.Location = new System.Drawing.Point(3, 3);
+            this.splitContainer1.Location = new System.Drawing.Point(4, 4);
+            this.splitContainer1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.splitContainer1.Name = "splitContainer1";
             // 
             // splitContainer1.Panel1
@@ -812,8 +866,9 @@ namespace SHSCC.OPD.UI.Patient
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.splitContainer2);
-            this.splitContainer1.Size = new System.Drawing.Size(829, 360);
-            this.splitContainer1.SplitterDistance = 302;
+            this.splitContainer1.Size = new System.Drawing.Size(1108, 447);
+            this.splitContainer1.SplitterDistance = 403;
+            this.splitContainer1.SplitterWidth = 5;
             this.splitContainer1.TabIndex = 1;
             // 
             // statusStrip1
@@ -821,12 +876,14 @@ namespace SHSCC.OPD.UI.Patient
             this.statusStrip1.BackColor = System.Drawing.Color.DarkSeaGreen;
             this.statusStrip1.Dock = System.Windows.Forms.DockStyle.Top;
             this.statusStrip1.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.statusStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripDropDownButton1,
             this.toolStripDropDownButton2});
             this.statusStrip1.Location = new System.Drawing.Point(0, 0);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(298, 22);
+            this.statusStrip1.Padding = new System.Windows.Forms.Padding(1, 0, 19, 0);
+            this.statusStrip1.Size = new System.Drawing.Size(399, 26);
             this.statusStrip1.TabIndex = 176;
             this.statusStrip1.Text = "statusStrip1";
             // 
@@ -842,37 +899,37 @@ namespace SHSCC.OPD.UI.Patient
             this.toolStripDropDownButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripDropDownButton1.Image")));
             this.toolStripDropDownButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripDropDownButton1.Name = "toolStripDropDownButton1";
-            this.toolStripDropDownButton1.Size = new System.Drawing.Size(56, 20);
+            this.toolStripDropDownButton1.Size = new System.Drawing.Size(71, 24);
             this.toolStripDropDownButton1.Text = "&Send To";
             // 
             // bothToolStripMenuItem
             // 
             this.bothToolStripMenuItem.Name = "bothToolStripMenuItem";
-            this.bothToolStripMenuItem.Size = new System.Drawing.Size(126, 22);
+            this.bothToolStripMenuItem.Size = new System.Drawing.Size(158, 26);
             this.bothToolStripMenuItem.Text = "&Both";
             this.bothToolStripMenuItem.Click += new System.EventHandler(this.bothToolStripMenuItem_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(123, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(155, 6);
             // 
             // ammulationToolStripMenuItem
             // 
             this.ammulationToolStripMenuItem.Name = "ammulationToolStripMenuItem";
-            this.ammulationToolStripMenuItem.Size = new System.Drawing.Size(126, 22);
+            this.ammulationToolStripMenuItem.Size = new System.Drawing.Size(158, 26);
             this.ammulationToolStripMenuItem.Text = "A&mmulation";
             this.ammulationToolStripMenuItem.Click += new System.EventHandler(this.ammulationToolStripMenuItem_Click);
             // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(123, 6);
+            this.toolStripSeparator2.Size = new System.Drawing.Size(155, 6);
             // 
             // aggravationToolStripMenuItem
             // 
             this.aggravationToolStripMenuItem.Name = "aggravationToolStripMenuItem";
-            this.aggravationToolStripMenuItem.Size = new System.Drawing.Size(126, 22);
+            this.aggravationToolStripMenuItem.Size = new System.Drawing.Size(158, 26);
             this.aggravationToolStripMenuItem.Text = "A&ggravation";
             this.aggravationToolStripMenuItem.Click += new System.EventHandler(this.aggravationToolStripMenuItem_Click);
             // 
@@ -886,33 +943,34 @@ namespace SHSCC.OPD.UI.Patient
             this.toolStripDropDownButton2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripDropDownButton2.Image")));
             this.toolStripDropDownButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripDropDownButton2.Name = "toolStripDropDownButton2";
-            this.toolStripDropDownButton2.Size = new System.Drawing.Size(77, 20);
+            this.toolStripDropDownButton2.Size = new System.Drawing.Size(93, 24);
             this.toolStripDropDownButton2.Text = "&Add Modality";
             // 
             // toolStripTextBox1
             // 
             this.toolStripTextBox1.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.toolStripTextBox1.Name = "toolStripTextBox1";
-            this.toolStripTextBox1.Size = new System.Drawing.Size(200, 23);
+            this.toolStripTextBox1.Size = new System.Drawing.Size(200, 27);
             // 
             // toolStripSeparator3
             // 
             this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(257, 6);
+            this.toolStripSeparator3.Size = new System.Drawing.Size(271, 6);
             // 
             // toolStripMenuItem1
             // 
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(260, 22);
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(274, 26);
             this.toolStripMenuItem1.Text = "SAVE";
             this.toolStripMenuItem1.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
             // 
             // btnSaveModDtl
             // 
             this.btnSaveModDtl.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.btnSaveModDtl.Location = new System.Drawing.Point(0, 312);
+            this.btnSaveModDtl.Location = new System.Drawing.Point(0, 389);
+            this.btnSaveModDtl.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnSaveModDtl.Name = "btnSaveModDtl";
-            this.btnSaveModDtl.Size = new System.Drawing.Size(298, 44);
+            this.btnSaveModDtl.Size = new System.Drawing.Size(399, 54);
             this.btnSaveModDtl.TabIndex = 175;
             this.btnSaveModDtl.Text = "Save";
             this.btnSaveModDtl.UseVisualStyleBackColor = true;
@@ -926,10 +984,11 @@ namespace SHSCC.OPD.UI.Patient
             this.checkedListBox1.ColumnWidth = 200;
             this.checkedListBox1.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkedListBox1.FormattingEnabled = true;
-            this.checkedListBox1.Location = new System.Drawing.Point(4, 32);
+            this.checkedListBox1.Location = new System.Drawing.Point(5, 39);
+            this.checkedListBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.checkedListBox1.MultiColumn = true;
             this.checkedListBox1.Name = "checkedListBox1";
-            this.checkedListBox1.Size = new System.Drawing.Size(289, 268);
+            this.checkedListBox1.Size = new System.Drawing.Size(386, 304);
             this.checkedListBox1.Sorted = true;
             this.checkedListBox1.TabIndex = 173;
             // 
@@ -939,6 +998,7 @@ namespace SHSCC.OPD.UI.Patient
             this.splitContainer2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.splitContainer2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.splitContainer2.Location = new System.Drawing.Point(0, 0);
+            this.splitContainer2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.splitContainer2.Name = "splitContainer2";
             this.splitContainer2.Orientation = System.Windows.Forms.Orientation.Horizontal;
             // 
@@ -955,16 +1015,18 @@ namespace SHSCC.OPD.UI.Patient
             this.splitContainer2.Panel2.Controls.Add(this.button4);
             this.splitContainer2.Panel2.Controls.Add(this.label23);
             this.splitContainer2.Panel2.Controls.Add(this.listBoxAggra);
-            this.splitContainer2.Size = new System.Drawing.Size(523, 360);
-            this.splitContainer2.SplitterDistance = 176;
+            this.splitContainer2.Size = new System.Drawing.Size(700, 447);
+            this.splitContainer2.SplitterDistance = 218;
+            this.splitContainer2.SplitterWidth = 5;
             this.splitContainer2.TabIndex = 0;
             // 
             // button2
             // 
             this.button2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.button2.Location = new System.Drawing.Point(0, 133);
+            this.button2.Location = new System.Drawing.Point(0, 166);
+            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(519, 39);
+            this.button2.Size = new System.Drawing.Size(696, 48);
             this.button2.TabIndex = 2;
             this.button2.Text = "REMOVE";
             this.button2.UseVisualStyleBackColor = true;
@@ -976,8 +1038,9 @@ namespace SHSCC.OPD.UI.Patient
             this.label19.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label19.ForeColor = System.Drawing.Color.Coral;
             this.label19.Location = new System.Drawing.Point(0, 0);
+            this.label19.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(108, 18);
+            this.label19.Size = new System.Drawing.Size(140, 22);
             this.label19.TabIndex = 1;
             this.label19.Text = "AMMULATION";
             // 
@@ -990,18 +1053,20 @@ namespace SHSCC.OPD.UI.Patient
             this.listBoxAmmu.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.listBoxAmmu.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listBoxAmmu.FormattingEnabled = true;
-            this.listBoxAmmu.ItemHeight = 16;
-            this.listBoxAmmu.Location = new System.Drawing.Point(5, 19);
+            this.listBoxAmmu.ItemHeight = 20;
+            this.listBoxAmmu.Location = new System.Drawing.Point(7, 23);
+            this.listBoxAmmu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.listBoxAmmu.Name = "listBoxAmmu";
-            this.listBoxAmmu.Size = new System.Drawing.Size(504, 98);
+            this.listBoxAmmu.Size = new System.Drawing.Size(675, 102);
             this.listBoxAmmu.TabIndex = 0;
             // 
             // button4
             // 
             this.button4.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.button4.Location = new System.Drawing.Point(0, 144);
+            this.button4.Location = new System.Drawing.Point(0, 181);
+            this.button4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(519, 32);
+            this.button4.Size = new System.Drawing.Size(696, 39);
             this.button4.TabIndex = 3;
             this.button4.Text = "REMOVE";
             this.button4.UseVisualStyleBackColor = true;
@@ -1013,8 +1078,9 @@ namespace SHSCC.OPD.UI.Patient
             this.label23.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label23.ForeColor = System.Drawing.Color.Coral;
             this.label23.Location = new System.Drawing.Point(0, 0);
+            this.label23.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(113, 18);
+            this.label23.Size = new System.Drawing.Size(148, 22);
             this.label23.TabIndex = 2;
             this.label23.Text = "AGGRAVATION";
             // 
@@ -1027,20 +1093,22 @@ namespace SHSCC.OPD.UI.Patient
             this.listBoxAggra.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.listBoxAggra.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listBoxAggra.FormattingEnabled = true;
-            this.listBoxAggra.ItemHeight = 16;
-            this.listBoxAggra.Location = new System.Drawing.Point(9, 21);
+            this.listBoxAggra.ItemHeight = 20;
+            this.listBoxAggra.Location = new System.Drawing.Point(12, 26);
+            this.listBoxAggra.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.listBoxAggra.Name = "listBoxAggra";
-            this.listBoxAggra.Size = new System.Drawing.Size(504, 114);
+            this.listBoxAggra.Size = new System.Drawing.Size(675, 122);
             this.listBoxAggra.TabIndex = 1;
             // 
             // tabPage2
             // 
             this.tabPage2.Controls.Add(this.btnSaveAppointDtl);
             this.tabPage2.Controls.Add(this.dataGridView1);
-            this.tabPage2.Location = new System.Drawing.Point(4, 41);
+            this.tabPage2.Location = new System.Drawing.Point(4, 47);
+            this.tabPage2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(835, 366);
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage2.Size = new System.Drawing.Size(1116, 455);
             this.tabPage2.TabIndex = 4;
             this.tabPage2.Text = "Appointment";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -1048,9 +1116,10 @@ namespace SHSCC.OPD.UI.Patient
             // btnSaveAppointDtl
             // 
             this.btnSaveAppointDtl.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnSaveAppointDtl.Location = new System.Drawing.Point(609, 311);
+            this.btnSaveAppointDtl.Location = new System.Drawing.Point(812, 383);
+            this.btnSaveAppointDtl.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnSaveAppointDtl.Name = "btnSaveAppointDtl";
-            this.btnSaveAppointDtl.Size = new System.Drawing.Size(220, 49);
+            this.btnSaveAppointDtl.Size = new System.Drawing.Size(293, 60);
             this.btnSaveAppointDtl.TabIndex = 189;
             this.btnSaveAppointDtl.Text = "SAVE DETAILS";
             this.btnSaveAppointDtl.UseVisualStyleBackColor = true;
@@ -1062,9 +1131,11 @@ namespace SHSCC.OPD.UI.Patient
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(3, 3);
+            this.dataGridView1.Location = new System.Drawing.Point(4, 4);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(829, 298);
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.Size = new System.Drawing.Size(1105, 367);
             this.dataGridView1.TabIndex = 0;
             // 
             // tabPage5
@@ -1082,10 +1153,11 @@ namespace SHSCC.OPD.UI.Patient
             this.tabPage5.Controls.Add(this.pictureBox5);
             this.tabPage5.Controls.Add(this.pictureBox4);
             this.tabPage5.Controls.Add(this.pictureBox3);
-            this.tabPage5.Location = new System.Drawing.Point(4, 41);
+            this.tabPage5.Location = new System.Drawing.Point(4, 47);
+            this.tabPage5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tabPage5.Name = "tabPage5";
-            this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage5.Size = new System.Drawing.Size(835, 366);
+            this.tabPage5.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage5.Size = new System.Drawing.Size(1116, 455);
             this.tabPage5.TabIndex = 5;
             this.tabPage5.Text = "Desease Details";
             this.tabPage5.UseVisualStyleBackColor = true;
@@ -1093,9 +1165,10 @@ namespace SHSCC.OPD.UI.Patient
             // btnSaveDesDtl
             // 
             this.btnSaveDesDtl.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnSaveDesDtl.Location = new System.Drawing.Point(600, 300);
+            this.btnSaveDesDtl.Location = new System.Drawing.Point(800, 369);
+            this.btnSaveDesDtl.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnSaveDesDtl.Name = "btnSaveDesDtl";
-            this.btnSaveDesDtl.Size = new System.Drawing.Size(220, 49);
+            this.btnSaveDesDtl.Size = new System.Drawing.Size(293, 60);
             this.btnSaveDesDtl.TabIndex = 198;
             this.btnSaveDesDtl.Text = "SAVE DETAILS";
             this.btnSaveDesDtl.UseVisualStyleBackColor = true;
@@ -1105,35 +1178,39 @@ namespace SHSCC.OPD.UI.Patient
             this.label27.AutoSize = true;
             this.label27.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label27.ForeColor = System.Drawing.Color.Black;
-            this.label27.Location = new System.Drawing.Point(428, 270);
+            this.label27.Location = new System.Drawing.Point(571, 332);
+            this.label27.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(118, 20);
+            this.label27.Size = new System.Drawing.Size(147, 24);
             this.label27.TabIndex = 197;
             this.label27.Text = "Reports Added{#}";
             // 
             // button10
             // 
-            this.button10.Location = new System.Drawing.Point(418, 224);
+            this.button10.Location = new System.Drawing.Point(557, 276);
+            this.button10.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(201, 37);
+            this.button10.Size = new System.Drawing.Size(268, 46);
             this.button10.TabIndex = 196;
             this.button10.Text = "Add More Report";
             this.button10.UseVisualStyleBackColor = true;
             // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(275, 224);
+            this.button6.Location = new System.Drawing.Point(367, 276);
+            this.button6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(137, 66);
+            this.button6.Size = new System.Drawing.Size(183, 81);
             this.button6.TabIndex = 194;
             this.button6.Text = "Upload Report";
             this.button6.UseVisualStyleBackColor = true;
             // 
             // button9
             // 
-            this.button9.Location = new System.Drawing.Point(42, 281);
+            this.button9.Location = new System.Drawing.Point(56, 346);
+            this.button9.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(217, 37);
+            this.button9.Size = new System.Drawing.Size(289, 46);
             this.button9.TabIndex = 64;
             this.button9.Text = "Add Desease Photo";
             this.button9.UseVisualStyleBackColor = true;
@@ -1143,26 +1220,29 @@ namespace SHSCC.OPD.UI.Patient
             this.label26.AutoSize = true;
             this.label26.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label26.ForeColor = System.Drawing.Color.Black;
-            this.label26.Location = new System.Drawing.Point(73, 209);
+            this.label26.Location = new System.Drawing.Point(97, 257);
+            this.label26.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(123, 20);
+            this.label26.Size = new System.Drawing.Size(153, 24);
             this.label26.TabIndex = 63;
             this.label26.Text = "Desease image {#}";
             // 
             // button8
             // 
-            this.button8.Location = new System.Drawing.Point(155, 238);
+            this.button8.Location = new System.Drawing.Point(207, 293);
+            this.button8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(104, 37);
+            this.button8.Size = new System.Drawing.Size(139, 46);
             this.button8.TabIndex = 62;
             this.button8.Text = "Previous";
             this.button8.UseVisualStyleBackColor = true;
             // 
             // button7
             // 
-            this.button7.Location = new System.Drawing.Point(42, 238);
+            this.button7.Location = new System.Drawing.Point(56, 293);
+            this.button7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(84, 37);
+            this.button7.Size = new System.Drawing.Size(112, 46);
             this.button7.TabIndex = 57;
             this.button7.Text = "Next";
             this.button7.UseVisualStyleBackColor = true;
@@ -1170,45 +1250,50 @@ namespace SHSCC.OPD.UI.Patient
             // pictureBox2
             // 
             this.pictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox2.Location = new System.Drawing.Point(275, 27);
+            this.pictureBox2.Location = new System.Drawing.Point(367, 33);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(344, 191);
+            this.pictureBox2.Size = new System.Drawing.Size(458, 235);
             this.pictureBox2.TabIndex = 195;
             this.pictureBox2.TabStop = false;
             // 
             // pictureBox6
             // 
             this.pictureBox6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox6.Location = new System.Drawing.Point(145, 120);
+            this.pictureBox6.Location = new System.Drawing.Point(193, 148);
+            this.pictureBox6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(97, 77);
+            this.pictureBox6.Size = new System.Drawing.Size(129, 94);
             this.pictureBox6.TabIndex = 61;
             this.pictureBox6.TabStop = false;
             // 
             // pictureBox5
             // 
             this.pictureBox5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox5.Location = new System.Drawing.Point(29, 120);
+            this.pictureBox5.Location = new System.Drawing.Point(39, 148);
+            this.pictureBox5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(97, 77);
+            this.pictureBox5.Size = new System.Drawing.Size(129, 94);
             this.pictureBox5.TabIndex = 60;
             this.pictureBox5.TabStop = false;
             // 
             // pictureBox4
             // 
             this.pictureBox4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox4.Location = new System.Drawing.Point(145, 27);
+            this.pictureBox4.Location = new System.Drawing.Point(193, 33);
+            this.pictureBox4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(97, 77);
+            this.pictureBox4.Size = new System.Drawing.Size(129, 94);
             this.pictureBox4.TabIndex = 59;
             this.pictureBox4.TabStop = false;
             // 
             // pictureBox3
             // 
             this.pictureBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox3.Location = new System.Drawing.Point(29, 27);
+            this.pictureBox3.Location = new System.Drawing.Point(39, 33);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(97, 77);
+            this.pictureBox3.Size = new System.Drawing.Size(129, 94);
             this.pictureBox3.TabIndex = 58;
             this.pictureBox3.TabStop = false;
             // 
@@ -1218,9 +1303,10 @@ namespace SHSCC.OPD.UI.Patient
             this.button5.AutoSize = true;
             this.button5.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.Location = new System.Drawing.Point(268, 3);
+            this.button5.Location = new System.Drawing.Point(357, 6);
+            this.button5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(331, 30);
+            this.button5.Size = new System.Drawing.Size(407, 35);
             this.button5.TabIndex = 187;
             this.button5.Text = "SAVE PATIENT DETAILS AND CLOSE";
             this.button5.UseVisualStyleBackColor = true;
@@ -1238,16 +1324,18 @@ namespace SHSCC.OPD.UI.Patient
             this.panel1.Controls.Add(this.label3);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(867, 104);
+            this.panel1.Size = new System.Drawing.Size(1156, 128);
             this.panel1.TabIndex = 1;
             // 
             // btnAddPatDtl
             // 
             this.btnAddPatDtl.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnAddPatDtl.Location = new System.Drawing.Point(699, 54);
+            this.btnAddPatDtl.Location = new System.Drawing.Point(932, 66);
+            this.btnAddPatDtl.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnAddPatDtl.Name = "btnAddPatDtl";
-            this.btnAddPatDtl.Size = new System.Drawing.Size(137, 29);
+            this.btnAddPatDtl.Size = new System.Drawing.Size(183, 36);
             this.btnAddPatDtl.TabIndex = 188;
             this.btnAddPatDtl.Text = "ADD DETAILS";
             this.btnAddPatDtl.UseVisualStyleBackColor = true;
@@ -1257,27 +1345,30 @@ namespace SHSCC.OPD.UI.Patient
             // 
             this.dateTimePicker1.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(516, 57);
+            this.dateTimePicker1.Location = new System.Drawing.Point(688, 70);
+            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(145, 26);
+            this.dateTimePicker1.Size = new System.Drawing.Size(192, 30);
             this.dateTimePicker1.TabIndex = 30;
             // 
             // tbname
             // 
             this.tbname.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tbname.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbname.Location = new System.Drawing.Point(235, 57);
+            this.tbname.Location = new System.Drawing.Point(313, 70);
+            this.tbname.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tbname.Name = "tbname";
-            this.tbname.Size = new System.Drawing.Size(212, 26);
+            this.tbname.Size = new System.Drawing.Size(282, 30);
             this.tbname.TabIndex = 32;
             // 
             // tbregno
             // 
             this.tbregno.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tbregno.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbregno.Location = new System.Drawing.Point(21, 57);
+            this.tbregno.Location = new System.Drawing.Point(28, 70);
+            this.tbregno.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tbregno.Name = "tbregno";
-            this.tbregno.Size = new System.Drawing.Size(170, 26);
+            this.tbregno.Size = new System.Drawing.Size(226, 30);
             this.tbregno.TabIndex = 31;
             this.tbregno.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.tbregno.TextChanged += new System.EventHandler(this.tbregno_TextChanged);
@@ -1287,9 +1378,10 @@ namespace SHSCC.OPD.UI.Patient
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial Narrow", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(499, 9);
+            this.label1.Location = new System.Drawing.Point(665, 11);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(197, 37);
+            this.label1.Size = new System.Drawing.Size(243, 46);
             this.label1.TabIndex = 27;
             this.label1.Text = "Date and Time";
             // 
@@ -1298,9 +1390,10 @@ namespace SHSCC.OPD.UI.Patient
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Arial Narrow", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(8, 9);
+            this.label2.Location = new System.Drawing.Point(11, 11);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(213, 37);
+            this.label2.Size = new System.Drawing.Size(264, 46);
             this.label2.TabIndex = 28;
             this.label2.Text = "Registration No";
             // 
@@ -1309,9 +1402,10 @@ namespace SHSCC.OPD.UI.Patient
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Arial Narrow", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(274, 9);
+            this.label3.Location = new System.Drawing.Point(365, 11);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(142, 37);
+            this.label3.Size = new System.Drawing.Size(176, 46);
             this.label3.TabIndex = 29;
             this.label3.Text = "Full Name";
             // 
@@ -1320,9 +1414,10 @@ namespace SHSCC.OPD.UI.Patient
             this.panel2.BackColor = System.Drawing.Color.Orchid;
             this.panel2.Controls.Add(this.button5);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(0, 523);
+            this.panel2.Location = new System.Drawing.Point(0, 644);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(867, 36);
+            this.panel2.Size = new System.Drawing.Size(1156, 44);
             this.panel2.TabIndex = 2;
             // 
             // openFileDialog1
@@ -1341,15 +1436,16 @@ namespace SHSCC.OPD.UI.Patient
             // 
             // FrmAddNew
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(867, 559);
+            this.ClientSize = new System.Drawing.Size(1156, 688);
             this.ControlBox = false;
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.tabControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FrmAddNew";
