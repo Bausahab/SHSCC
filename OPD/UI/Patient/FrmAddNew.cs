@@ -1,6 +1,8 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -9,35 +11,35 @@ namespace SHSCC.OPD.UI.Patient
 {
     public partial class FrmAddNew : Form
     {
-        public static List<DataModels.Appointments> AllAppointments = new List<DataModels.Appointments>();
-        public EventHandler<DataModels.PatientModel> PatientData;
+       
+        //public EventHandler<DataModels.PatientModel> PatientData;
         static DataModels.PatientModel patentoadd = null;
-        DataModels.PatientImages ok;
+      //  DataModels.PatientImages ok;
        // ShsccDbContext dbcontext;
         OPD.UI.AppUI.FrmAddAppData ShowAddAppData;
-        int CurrentPatientID { get; set; }
+        String CurrentPatientRegno { get; set; }
         public FrmAddNew()
         {
             InitializeComponent();
         }
         public FrmAddNew(int patID) : this()
         {
-            if (patID == 0)
-            {
-                patentoadd = new DataModels.PatientModel();
-                ok = new DataModels.PatientImages();
-            }
-            else
-            {
-                //fill all data 
-            }
+            //if (patID == 0)
+            //{
+            //    patentoadd = new DataModels.PatientModel();
+            //    ok = new DataModels.PatientImages();
+            //}
+            //else
+            //{
+            //    //fill all data 
+            //}
 
         }
 
         private void FrmAddNew_Load(object sender, EventArgs e)
         {
              tabControl1.Enabled = false;
-            dataGridView1.DataSource = AllAppointments.ToList();
+            dataGridView1.DataSource = Data.LoadedDataFiles.AllAppointments.ToList();
             addDiagnosDate();
         }
 
@@ -93,17 +95,19 @@ namespace SHSCC.OPD.UI.Patient
                  }
                  else
                  {
+                     
                     // using (dbcontext = new ShsccDbContext())
                     // {
                     //     tbregno.BackColor = Color.White;
                     //     tbname.BackColor = Color.White;
-                    //    //  patentoadd = new DataModels.PatientModel();
-                    //    patentoadd.RegNo = tbregno.Text;
-                    //     patentoadd.Name = tbname.Text;
-                    //     patentoadd.DateReg = dateTimePicker1.Value.Date;
-                    //    //dbcontext.PAITENTS.Add(patentoadd);
-                    //    //dbcontext.SaveChanges();
-                    //}
+                    patentoadd = new DataModels.PatientModel();
+                     patentoadd.RegNo = tbregno.Text;
+                     patentoadd.Name = tbname.Text;
+                     patentoadd.DateReg = dateTimePicker1.Value.Date;
+                     SHSCCTextDataOperationTasks.CreatePatient(tbregno.Text+".json", JsonConvert.SerializeObject(patentoadd));
+                     //dbcontext.PAITENTS.Add(patentoadd);
+                     //    //dbcontext.SaveChanges();
+                     //}
 
                  }
              }).ContinueWith((Task) =>
@@ -112,7 +116,7 @@ namespace SHSCC.OPD.UI.Patient
                  {
                      tabControl1.Enabled = true;
                      btnSave.Enabled = false;
-                     CurrentPatientID = patentoadd.ID;
+                     CurrentPatientRegno = patentoadd.RegNo;
                  }));
              });
         }
@@ -308,7 +312,17 @@ namespace SHSCC.OPD.UI.Patient
             this.flowLayoutPanel1.Controls.Add(lbldate);
         }
 
-   
+        private void kryptonButton10_Click(object sender, EventArgs e)
+        {
+            kryptonListBox1.Items.AddRange(SHSCCTextDataOperationTasks.GetAllFiles(Path.Combine(Properties.Settings.Default.DefaultDir, "SHSCCDataBase\\Patient")));
+
+        }
+
+        private void kryptonListBox1_SelectedValueChanged(object sender, EventArgs e)
+        {
+            string kk = kryptonListBox1.SelectedItem.ToString();
+            kryptonRichTextBox1.Text = SHSCCTextDataOperationTasks.ReadPatient(kk);
+        }
     }
 
 

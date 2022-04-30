@@ -6,10 +6,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace SHSCC.DataModels
 {
     public class PatientModel
-    {
-        [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int ID { get; set; }
+    { 
         public DateTime DateReg { get; set; }
         public string RegNo { get; set; }
         public string Name { get; set; }
@@ -19,6 +16,18 @@ namespace SHSCC.DataModels
         public int Age { get; set; }
         public string ContactNo { get; set; }
         public string Address { get; set; }
+        public List<string[]> ModAggra { get; set; }
+        public List<string[]> ModEmmu { get; set; }
+        public List<Appointments> AppointmentsForPatient { get; set; }
+        public PatientModel()
+        {
+            
+            AppointmentsForPatient = new List<Appointments>();
+        }
+
+    }
+    public class Diagnostics
+    {
         public string Scab { get; set; }
         public string Pulse { get; set; }
         public string BP { get; set; }
@@ -31,15 +40,7 @@ namespace SHSCC.DataModels
         public string Redness { get; set; }
         public string Burning { get; set; }
         public string Symptom { get; set; }
-        public List<string[]> ModAggra { get; set; }
-        public List<string[]> ModEmmu { get; set; }
-        public List<PatientImages> ImagesForPatient { get; set; }
-        public List<Appointments> AppointmentsForPatient { get; set; }
-        public PatientModel()
-        {
-            ImagesForPatient = new List<PatientImages>();
-            AppointmentsForPatient = new List<Appointments>();
-        }
+        public string ReportSummery { get; set; }
 
     }
     public class Account
@@ -60,24 +61,27 @@ namespace SHSCC.DataModels
     }
     public class Appointments
     {
-        [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+       
         //public int ID { get; set; }
-        //public int PatientID { get; set; }
+        //public string PatientRegNo { get; set; }
         public DateTime AppointmentDate { get; set; }
-        //public DateTime AppointmentNext { get; set; }
+        public DateTime AppointmentNext { get; set; }
         public string MedicineName { get; set; }
         public string MedicinePotential { get; set; }
-
+        public List<PatientImages> ImagesForPatient { get; set; }
+        public Diagnostics DiagnosedOnAppointment { get; set; }
+        public Appointments()
+        {
+            DiagnosedOnAppointment = new Diagnostics();
+            ImagesForPatient = new List<PatientImages>();
+        }
     }
     public class PatientImages
     {
-        [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int ID { get; set; }
-        public int PatientID { get; set; }
+
+       
         public ImageTypes ImageType { get; set; }
-        public byte[] ImageRecord { get; set; }
+        public string  ImagePath { get; set; }
         
     }
     public enum ImageTypes
@@ -87,6 +91,6 @@ namespace SHSCC.DataModels
         PatientReportImage
     }
 
-
+    
 
 }
