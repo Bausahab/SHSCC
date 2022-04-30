@@ -62,10 +62,10 @@ namespace SHSCC.DataModels
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int ID { get; set; }
-        public int PatientID { get; set; }
+        //public int ID { get; set; }
+        //public int PatientID { get; set; }
         public DateTime AppointmentDate { get; set; }
-        public DateTime AppointmentNext { get; set; }
+        //public DateTime AppointmentNext { get; set; }
         public string MedicineName { get; set; }
         public string MedicinePotential { get; set; }
 

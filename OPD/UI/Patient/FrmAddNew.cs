@@ -38,12 +38,10 @@ namespace SHSCC.OPD.UI.Patient
         {
              tabControl1.Enabled = false;
             dataGridView1.DataSource = AllAppointments.ToList();
+            addDiagnosDate();
         }
 
-        private void tabPage3_Click(object sender, EventArgs e)
-        {
-
-        }
+     
 
         private void button6_Click(object sender, EventArgs e)
         {
@@ -282,6 +280,35 @@ namespace SHSCC.OPD.UI.Patient
         {
 
         }
+
+        private void tableLayoutPanel4_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+
+        public void addDiagnosDate()
+        {
+            Label lbldate = new Label();
+           
+            // 
+            lbldate.AutoSize = true;
+            lbldate.BackColor = Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(89)))), ((int)(((byte)(153)))));
+            lbldate.Font = new Font("Comic Sans MS", 12F, ((FontStyle)((FontStyle.Bold | FontStyle.Italic))), GraphicsUnit.Point, ((byte)(0)));
+            lbldate.ForeColor = Color.White;
+            lbldate.Location = new Point(254, 5);
+            lbldate.Margin = new Padding(10, 0, 3, 0);
+            lbldate.Name = "addDateLBL";
+            lbldate.Padding = new Padding(4);
+            lbldate.Size = new Size(33, 37);
+            lbldate.Text = "+";
+            lbldate.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+
+            this.flowLayoutPanel1.Controls.Add(lbldate);
+        }
+
+   
     }
 
 
