@@ -1603,9 +1603,9 @@ namespace SHSCC.OPD.UI.Patient
             this.label31.Location = new System.Drawing.Point(30, 18);
             this.label31.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(55, 28);
+            this.label31.Size = new System.Drawing.Size(180, 28);
             this.label31.TabIndex = 28;
-            this.label31.Text = "Date";
+            this.label31.Text = "Next Appointment";
             // 
             // tabPage5
             // 
