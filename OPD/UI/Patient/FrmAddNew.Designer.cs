@@ -1550,9 +1550,9 @@ namespace SHSCC.OPD.UI.Patient
             this.label31.ForeColor = System.Drawing.Color.Black;
             this.label31.Location = new System.Drawing.Point(22, 15);
             this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(45, 23);
+            this.label31.Size = new System.Drawing.Size(180, 28);
             this.label31.TabIndex = 28;
-            this.label31.Text = "Date";
+            this.label31.Text = "Next Appointment";
             // 
             // tabPage5
             // 
