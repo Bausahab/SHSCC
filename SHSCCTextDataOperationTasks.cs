@@ -9,38 +9,30 @@ namespace SHSCC
 
       
 
-       internal static async Task<bool> PathExist()
+       public static async Task<bool> DriveExist()
         {
             return await Task.FromResult(Directory.Exists(Properties.Settings.Default.DefaultDir));
         }
 
-        public static Task<bool> ValidatePathStructure_CreateIfNotExist()
+        public static Task<bool> ValidatePathStructure()
         {
             bool res = false;
-            if (SHSCCTextDataOperationTasks.PathExist().GetAwaiter().GetResult())
-            {
+           
                 if (Directory.Exists(Path.Combine(Properties.Settings.Default.DefaultDir, "SHSCCDataBase")))
                 {
                     res = true;
                     
                 }
-                else
-                {
-                    Directory.CreateDirectory(Path.Combine(Properties.Settings.Default.DefaultDir, "SHSCCDataBase"));
-                    Directory.CreateDirectory(Path.Combine(Properties.Settings.Default.DefaultDir, "SHSCCDataBase/Patient"));
-                    Directory.CreateDirectory(Path.Combine(Properties.Settings.Default.DefaultDir, "SHSCCDataBase/Images"));
-                    Directory.CreateDirectory(Path.Combine(Properties.Settings.Default.DefaultDir, "SHSCCDataBase/WereHouse"));
-                    res = false;
-                    // return Task.FromResult(true);
-                }
-
-
-            }
             else
             {
                 res = false;
-               
             }
+                //else
+                //{
+                //   
+                //    res = false;
+                //    // return Task.FromResult(true);
+                //}
 
             return Task.FromResult(res);
         }
@@ -67,9 +59,11 @@ namespace SHSCC
             if (checkfile)
                 return File.ReadAllText(pthh);
             else
-                return "File not found";
+                return null; //Please null he rahne do mai use kr rha hu ise or in future apko ye line dikha to mujhe btana pta to chale ke aap code kr rhe ho 
 
         }
+
+ 
         public static string[] GetAllFiles(string DirName)
         {
             string[] fileArray = Directory.GetFiles(DirName, "*.json");

@@ -16,12 +16,14 @@ namespace SHSCC.DataModels
         public int Age { get; set; }
         public string ContactNo { get; set; }
         public string Address { get; set; }
-        public List<string[]> ModAggra { get; set; }
-        public List<string[]> ModEmmu { get; set; }
+        public List<string> ModAggra { get; set; }
+        public List<string> ModEmmu { get; set; }
         public List<Appointments> AppointmentsForPatient { get; set; }
+        public string Image { get; set; }
         public PatientModel()
         {
-            
+            ModEmmu = new List<string>();
+            ModAggra = new List<string>();
             AppointmentsForPatient = new List<Appointments>();
         }
 
@@ -32,7 +34,8 @@ namespace SHSCC.DataModels
         public string Pulse { get; set; }
         public string BP { get; set; }
         public int Weight { get; set; }
-        public string Complaint { get; set; }
+        public string ComplaintSince { get; set; }
+        public string ComplaintType { get; set; }
         public string BodyPart { get; set; }
         public string Discharge { get; set; }
         public string Family { get; set; }
@@ -41,6 +44,7 @@ namespace SHSCC.DataModels
         public string Burning { get; set; }
         public string Symptom { get; set; }
         public string ReportSummery { get; set; }
+
 
     }
     public class Account
@@ -62,34 +66,37 @@ namespace SHSCC.DataModels
     public class Appointments
     {
        
-        //public int ID { get; set; }
-        //public string PatientRegNo { get; set; }
         public DateTime AppointmentDate { get; set; }
         public DateTime AppointmentNext { get; set; }
         public string MedicineName { get; set; }
         public string MedicinePotential { get; set; }
-        public List<PatientImages> ImagesForPatient { get; set; }
+
+        public List<string> DeaseaseImagesForPatient { get; set; }
+        public List<string> ReportImagesForPatient { get; set; }
+
         public Diagnostics DiagnosedOnAppointment { get; set; }
         public Appointments()
         {
+            DeaseaseImagesForPatient = new List<string>();
+            ReportImagesForPatient = new List<string>();
             DiagnosedOnAppointment = new Diagnostics();
-            ImagesForPatient = new List<PatientImages>();
+           
         }
     }
-    public class PatientImages
-    {
+    //public class PatientImages
+    //{
 
        
-        public ImageTypes ImageType { get; set; }
-        public string  ImagePath { get; set; }
+    //    public ImageTypes ImageType { get; set; }
+    //    public string  ImagePath { get; set; }
         
-    }
-    public enum ImageTypes
-    {
-        PatientImage,
-        PatientDeseaseImage,
-        PatientReportImage
-    }
+    //}
+    //public enum ImageTypes
+    //{
+    //    PatientImage,
+    //    PatientDeseaseImage,
+    //    PatientReportImage
+    //}
 
     
 

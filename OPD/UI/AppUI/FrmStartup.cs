@@ -39,18 +39,37 @@ namespace SHSCC.OPD.UI.AppUI
 
         private void btnStart_Click(object sender, EventArgs e)
         {
-            //saving datapath in settings
 
-            //checking if datapath exist
-            if (SHSCCTextDataOperationTasks.ValidatePathStructure_CreateIfNotExist().GetAwaiter().GetResult())
+            if (SHSCCTextDataOperationTasks.DriveExist().GetAwaiter().GetResult())
             {
+                if (SHSCCTextDataOperationTasks.ValidatePathStructure().GetAwaiter().GetResult())
+                {
+                    //load data
+                    AppStartClicked?.Invoke(this, null);
+                }
+                else
+                {
+                    if (DialogResult.Yes == MessageBox.Show("No Data Directories Found on Selected Drive! Do you want to create new?", "Data Not Found", MessageBoxButtons.YesNo))
+                    {
+                        Directory.CreateDirectory(Path.Combine(Properties.Settings.Default.DefaultDir, "SHSCCDataBase"));
+                        Directory.CreateDirectory(Path.Combine(Properties.Settings.Default.DefaultDir, "SHSCCDataBase/Patient"));
+                        Directory.CreateDirectory(Path.Combine(Properties.Settings.Default.DefaultDir, "SHSCCDataBase/Images"));
+                        Directory.CreateDirectory(Path.Combine(Properties.Settings.Default.DefaultDir, "SHSCCDataBase/WereHouse"));
+                        MessageBox.Show("New Data Setup Complete");
+                        AppStartClicked?.Invoke(this, null);
+                    }
+                    else
+                    {
+                        MessageBox.Show("DataBase not availabale,Restart Application");
+                        Application.Exit();
+                    }
+                }
 
-                AppStartClicked?.Invoke(this, null);
             }
             else
             {
-                MessageBox.Show("New Data Setup Complete");
-                AppStartClicked?.Invoke(this, null);
+
+                MessageBox.Show("Drive is not availabale.Either select new or attatch data drive");
             }
 
         }

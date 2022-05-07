@@ -29,6 +29,7 @@ namespace SHSCC.OPD.UI.Patient
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmAddNew));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
@@ -110,7 +111,6 @@ namespace SHSCC.OPD.UI.Patient
             this.button4 = new System.Windows.Forms.Button();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel3 = new System.Windows.Forms.Panel();
             this.kryptonButton3 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.textBox2 = new System.Windows.Forms.TextBox();
@@ -129,7 +129,6 @@ namespace SHSCC.OPD.UI.Patient
             this.kryptonButton9 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.button1 = new System.Windows.Forms.Button();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.label36 = new System.Windows.Forms.Label();
             this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
             this.label26 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
@@ -138,10 +137,12 @@ namespace SHSCC.OPD.UI.Patient
             this.kryptonButton5 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.button9 = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.label35 = new System.Windows.Forms.Label();
             this.tabPage6 = new System.Windows.Forms.TabPage();
+            this.kryptonRichTextBox1 = new ComponentFactory.Krypton.Toolkit.KryptonRichTextBox();
+            this.kryptonListBox1 = new ComponentFactory.Krypton.Toolkit.KryptonListBox();
             this.kryptonButton10 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.kryptonButton11 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.btnSave = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.tbname = new System.Windows.Forms.TextBox();
@@ -153,8 +154,7 @@ namespace SHSCC.OPD.UI.Patient
             this.btnReview = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.btnAddPat = new System.Windows.Forms.Button();
-            this.kryptonListBox1 = new ComponentFactory.Krypton.Toolkit.KryptonListBox();
-            this.kryptonRichTextBox1 = new ComponentFactory.Krypton.Toolkit.KryptonRichTextBox();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -177,7 +177,6 @@ namespace SHSCC.OPD.UI.Patient
             this.tableLayoutPanel1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel3.SuspendLayout();
             this.tabPage5.SuspendLayout();
             this.tableLayoutPanel5.SuspendLayout();
@@ -190,6 +189,7 @@ namespace SHSCC.OPD.UI.Patient
             this.tabPage6.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -210,6 +210,7 @@ namespace SHSCC.OPD.UI.Patient
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(1000, 455);
             this.tabControl1.TabIndex = 0;
+            this.tabControl1.TabStop = false;
             // 
             // tabPage1
             // 
@@ -234,7 +235,7 @@ namespace SHSCC.OPD.UI.Patient
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage1.Size = new System.Drawing.Size(992, 418);
             this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "Registraion Details";
+            this.tabPage1.Text = "Registration Details";
             // 
             // kryptonButton1
             // 
@@ -553,15 +554,15 @@ namespace SHSCC.OPD.UI.Patient
             this.flowLayoutPanel1.Location = new System.Drawing.Point(3, 3);
             this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(2);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Padding = new System.Windows.Forms.Padding(4);
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(986, 49);
+            this.flowLayoutPanel1.Padding = new System.Windows.Forms.Padding(4, 0, 4, 4);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(986, 40);
             this.flowLayoutPanel1.TabIndex = 197;
             // 
             // label34
             // 
             this.label34.AutoSize = true;
-            this.label34.Location = new System.Drawing.Point(6, 4);
-            this.label34.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label34.Location = new System.Drawing.Point(6, 10);
+            this.label34.Margin = new System.Windows.Forms.Padding(2, 10, 2, 0);
             this.label34.Name = "label34";
             this.label34.Size = new System.Drawing.Size(64, 20);
             this.label34.TabIndex = 0;
@@ -1073,6 +1074,7 @@ namespace SHSCC.OPD.UI.Patient
             // 
             // checkedListBox1
             // 
+            this.checkedListBox1.CheckOnClick = true;
             this.checkedListBox1.ColumnWidth = 200;
             this.checkedListBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.checkedListBox1.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -1162,7 +1164,6 @@ namespace SHSCC.OPD.UI.Patient
             // 
             // toolStripTextBox1
             // 
-            this.toolStripTextBox1.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.toolStripTextBox1.Name = "toolStripTextBox1";
             this.toolStripTextBox1.Size = new System.Drawing.Size(200, 23);
             // 
@@ -1384,14 +1385,14 @@ namespace SHSCC.OPD.UI.Patient
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage2.Size = new System.Drawing.Size(992, 418);
             this.tabPage2.TabIndex = 4;
-            this.tabPage2.Text = "Appointment";
+            this.tabPage2.Text = "Prescription";
+            this.tabPage2.Enter += new System.EventHandler(this.tabPage2_Enter);
             // 
             // tableLayoutPanel4
             // 
             this.tableLayoutPanel4.ColumnCount = 2;
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel4.Controls.Add(this.dataGridView1, 1, 0);
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 38.54806F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 61.45194F));
             this.tableLayoutPanel4.Controls.Add(this.panel3, 0, 0);
             this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel4.Location = new System.Drawing.Point(3, 3);
@@ -1403,18 +1404,6 @@ namespace SHSCC.OPD.UI.Patient
             this.tableLayoutPanel4.Size = new System.Drawing.Size(986, 412);
             this.tableLayoutPanel4.TabIndex = 190;
             this.tableLayoutPanel4.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel4_Paint);
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(182)))), ((int)(((byte)(191)))));
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(496, 7);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.Size = new System.Drawing.Size(483, 398);
-            this.dataGridView1.TabIndex = 0;
             // 
             // panel3
             // 
@@ -1428,7 +1417,7 @@ namespace SHSCC.OPD.UI.Patient
             this.panel3.Controls.Add(this.dateTimePicker2);
             this.panel3.Controls.Add(this.label31);
             this.panel3.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel3.Location = new System.Drawing.Point(91, 6);
+            this.panel3.Location = new System.Drawing.Point(35, 6);
             this.panel3.Margin = new System.Windows.Forms.Padding(2);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(315, 400);
@@ -1490,6 +1479,7 @@ namespace SHSCC.OPD.UI.Patient
             this.kryptonButton3.TabIndex = 36;
             this.kryptonButton3.UseMnemonic = false;
             this.kryptonButton3.Values.Text = "Submit";
+            this.kryptonButton3.Click += new System.EventHandler(this.kryptonButton3_Click);
             // 
             // textBox2
             // 
@@ -1550,7 +1540,7 @@ namespace SHSCC.OPD.UI.Patient
             this.label31.ForeColor = System.Drawing.Color.Black;
             this.label31.Location = new System.Drawing.Point(22, 15);
             this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(180, 28);
+            this.label31.Size = new System.Drawing.Size(144, 23);
             this.label31.TabIndex = 28;
             this.label31.Text = "Next Appointment";
             // 
@@ -1589,20 +1579,19 @@ namespace SHSCC.OPD.UI.Patient
             this.tableLayoutPanel7.ColumnCount = 1;
             this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel7.Controls.Add(this.label27, 0, 0);
-            this.tableLayoutPanel7.Controls.Add(this.panel5, 0, 3);
-            this.tableLayoutPanel7.Controls.Add(this.button1, 0, 4);
+            this.tableLayoutPanel7.Controls.Add(this.panel5, 0, 2);
+            this.tableLayoutPanel7.Controls.Add(this.button1, 0, 3);
             this.tableLayoutPanel7.Controls.Add(this.pictureBox3, 0, 1);
-            this.tableLayoutPanel7.Controls.Add(this.label36, 0, 2);
             this.tableLayoutPanel7.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel7.Location = new System.Drawing.Point(502, 25);
             this.tableLayoutPanel7.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel7.Name = "tableLayoutPanel7";
-            this.tableLayoutPanel7.RowCount = 5;
+            this.tableLayoutPanel7.RowCount = 4;
             this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 49F));
             this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 32F));
             this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 81F));
             this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 65F));
+            this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel7.Size = new System.Drawing.Size(460, 352);
             this.tableLayoutPanel7.TabIndex = 1;
             // 
@@ -1736,6 +1725,7 @@ namespace SHSCC.OPD.UI.Patient
             this.kryptonButton8.TabIndex = 200;
             this.kryptonButton8.UseMnemonic = false;
             this.kryptonButton8.Values.Text = "<";
+            this.kryptonButton8.Click += new System.EventHandler(this.kryptonButton8_Click);
             // 
             // kryptonButton9
             // 
@@ -1788,6 +1778,7 @@ namespace SHSCC.OPD.UI.Patient
             this.kryptonButton9.TabIndex = 201;
             this.kryptonButton9.UseMnemonic = false;
             this.kryptonButton9.Values.Text = ">";
+            this.kryptonButton9.Click += new System.EventHandler(this.kryptonButton9_Click);
             // 
             // button1
             // 
@@ -1803,6 +1794,7 @@ namespace SHSCC.OPD.UI.Patient
             this.button1.TabIndex = 64;
             this.button1.Text = "Add Report Photo";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // pictureBox3
             // 
@@ -1812,44 +1804,32 @@ namespace SHSCC.OPD.UI.Patient
             this.pictureBox3.Location = new System.Drawing.Point(112, 90);
             this.pictureBox3.Margin = new System.Windows.Forms.Padding(38, 41, 38, 41);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(235, 43);
+            this.pictureBox3.Size = new System.Drawing.Size(235, 75);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox3.TabIndex = 65;
             this.pictureBox3.TabStop = false;
-            // 
-            // label36
-            // 
-            this.label36.AutoSize = true;
-            this.label36.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label36.Font = new System.Drawing.Font("Calibri", 13F);
-            this.label36.Location = new System.Drawing.Point(2, 174);
-            this.label36.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label36.Name = "label36";
-            this.label36.Size = new System.Drawing.Size(456, 32);
-            this.label36.TabIndex = 66;
-            this.label36.Text = "Upload Date: ";
-            this.label36.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // tableLayoutPanel6
             // 
             this.tableLayoutPanel6.ColumnCount = 1;
             this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel6.Controls.Add(this.label26, 0, 0);
-            this.tableLayoutPanel6.Controls.Add(this.panel4, 0, 3);
-            this.tableLayoutPanel6.Controls.Add(this.button9, 0, 4);
+            this.tableLayoutPanel6.Controls.Add(this.panel4, 0, 2);
+            this.tableLayoutPanel6.Controls.Add(this.button9, 0, 3);
             this.tableLayoutPanel6.Controls.Add(this.pictureBox2, 0, 1);
-            this.tableLayoutPanel6.Controls.Add(this.label35, 0, 2);
             this.tableLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel6.Location = new System.Drawing.Point(14, 25);
             this.tableLayoutPanel6.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel6.Name = "tableLayoutPanel6";
-            this.tableLayoutPanel6.RowCount = 5;
+            this.tableLayoutPanel6.RowCount = 4;
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 49F));
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 32F));
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 81F));
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 65F));
+            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel6.Size = new System.Drawing.Size(460, 352);
             this.tableLayoutPanel6.TabIndex = 0;
+            this.tableLayoutPanel6.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel6_Paint);
             // 
             // label26
             // 
@@ -1981,6 +1961,7 @@ namespace SHSCC.OPD.UI.Patient
             this.kryptonButton4.TabIndex = 200;
             this.kryptonButton4.UseMnemonic = false;
             this.kryptonButton4.Values.Text = "<";
+            this.kryptonButton4.Click += new System.EventHandler(this.kryptonButton4_Click);
             // 
             // kryptonButton5
             // 
@@ -2033,6 +2014,7 @@ namespace SHSCC.OPD.UI.Patient
             this.kryptonButton5.TabIndex = 201;
             this.kryptonButton5.UseMnemonic = false;
             this.kryptonButton5.Values.Text = ">";
+            this.kryptonButton5.Click += new System.EventHandler(this.kryptonButton5_Click);
             // 
             // button9
             // 
@@ -2048,6 +2030,7 @@ namespace SHSCC.OPD.UI.Patient
             this.button9.TabIndex = 64;
             this.button9.Text = "Add Desease Photo";
             this.button9.UseVisualStyleBackColor = false;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
             // pictureBox2
             // 
@@ -2057,22 +2040,10 @@ namespace SHSCC.OPD.UI.Patient
             this.pictureBox2.Location = new System.Drawing.Point(112, 90);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(38, 41, 38, 41);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(235, 43);
+            this.pictureBox2.Size = new System.Drawing.Size(235, 75);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 65;
             this.pictureBox2.TabStop = false;
-            // 
-            // label35
-            // 
-            this.label35.AutoSize = true;
-            this.label35.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label35.Font = new System.Drawing.Font("Calibri", 13F);
-            this.label35.Location = new System.Drawing.Point(2, 174);
-            this.label35.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(456, 32);
-            this.label35.TabIndex = 66;
-            this.label35.Text = "Upload Date: ";
-            this.label35.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // tabPage6
             // 
@@ -2086,6 +2057,22 @@ namespace SHSCC.OPD.UI.Patient
             this.tabPage6.TabIndex = 6;
             this.tabPage6.Text = "ALL Patients";
             this.tabPage6.UseVisualStyleBackColor = true;
+            // 
+            // kryptonRichTextBox1
+            // 
+            this.kryptonRichTextBox1.Location = new System.Drawing.Point(494, 23);
+            this.kryptonRichTextBox1.Name = "kryptonRichTextBox1";
+            this.kryptonRichTextBox1.Size = new System.Drawing.Size(466, 314);
+            this.kryptonRichTextBox1.TabIndex = 193;
+            this.kryptonRichTextBox1.Text = "kryptonRichTextBox1";
+            // 
+            // kryptonListBox1
+            // 
+            this.kryptonListBox1.Location = new System.Drawing.Point(19, 20);
+            this.kryptonListBox1.Name = "kryptonListBox1";
+            this.kryptonListBox1.Size = new System.Drawing.Size(411, 317);
+            this.kryptonListBox1.TabIndex = 191;
+            this.kryptonListBox1.SelectedValueChanged += new System.EventHandler(this.kryptonListBox1_SelectedValueChanged);
             // 
             // kryptonButton10
             // 
@@ -2142,6 +2129,7 @@ namespace SHSCC.OPD.UI.Patient
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(214)))), ((int)(((byte)(141)))));
+            this.panel1.Controls.Add(this.kryptonButton11);
             this.panel1.Controls.Add(this.btnSave);
             this.panel1.Controls.Add(this.dateTimePicker1);
             this.panel1.Controls.Add(this.tbname);
@@ -2155,6 +2143,57 @@ namespace SHSCC.OPD.UI.Patient
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1024, 104);
             this.panel1.TabIndex = 1;
+            // 
+            // kryptonButton11
+            // 
+            this.kryptonButton11.Location = new System.Drawing.Point(958, 57);
+            this.kryptonButton11.Margin = new System.Windows.Forms.Padding(12, 6, 12, 12);
+            this.kryptonButton11.Name = "kryptonButton11";
+            this.kryptonButton11.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(198)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.kryptonButton11.OverrideDefault.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(198)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.kryptonButton11.OverrideDefault.Back.ColorAngle = 45F;
+            this.kryptonButton11.OverrideDefault.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(118)))), ((int)(((byte)(210)))));
+            this.kryptonButton11.OverrideDefault.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(118)))), ((int)(((byte)(210)))));
+            this.kryptonButton11.OverrideDefault.Border.ColorAngle = 45F;
+            this.kryptonButton11.OverrideDefault.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kryptonButton11.OverrideDefault.Border.Rounding = 20;
+            this.kryptonButton11.OverrideDefault.Border.Width = 1;
+            this.kryptonButton11.OverrideDefault.Content.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Bold);
+            this.kryptonButton11.Size = new System.Drawing.Size(208, 32);
+            this.kryptonButton11.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(198)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.kryptonButton11.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(198)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.kryptonButton11.StateCommon.Back.ColorAngle = 45F;
+            this.kryptonButton11.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(118)))), ((int)(((byte)(210)))));
+            this.kryptonButton11.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(118)))), ((int)(((byte)(210)))));
+            this.kryptonButton11.StateCommon.Border.ColorAngle = 45F;
+            this.kryptonButton11.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kryptonButton11.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.kryptonButton11.StateCommon.Border.Rounding = 20;
+            this.kryptonButton11.StateCommon.Border.Width = 1;
+            this.kryptonButton11.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.White;
+            this.kryptonButton11.StateCommon.Content.ShortText.Color2 = System.Drawing.Color.White;
+            this.kryptonButton11.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kryptonButton11.StatePressed.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(198)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.kryptonButton11.StatePressed.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(198)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.kryptonButton11.StatePressed.Back.ColorAngle = 45F;
+            this.kryptonButton11.StateTracking.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(198)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.kryptonButton11.StateTracking.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(198)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.kryptonButton11.StateTracking.Back.ColorAngle = 45F;
+            this.kryptonButton11.StateTracking.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(118)))), ((int)(((byte)(210)))));
+            this.kryptonButton11.StateTracking.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(118)))), ((int)(((byte)(210)))));
+            this.kryptonButton11.StateTracking.Border.ColorAngle = 45F;
+            this.kryptonButton11.StateTracking.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kryptonButton11.StateTracking.Border.Rounding = 20;
+            this.kryptonButton11.StateTracking.Border.Width = 1;
+            this.kryptonButton11.TabIndex = 30;
+            this.kryptonButton11.UseMnemonic = false;
+            this.kryptonButton11.Values.Text = "Cancel";
             // 
             // btnSave
             // 
@@ -2203,7 +2242,7 @@ namespace SHSCC.OPD.UI.Patient
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.btnSave.StateTracking.Border.Rounding = 20;
             this.btnSave.StateTracking.Border.Width = 1;
-            this.btnSave.TabIndex = 189;
+            this.btnSave.TabIndex = 4;
             this.btnSave.UseMnemonic = false;
             this.btnSave.Values.Text = "ADD DETAILS";
             this.btnSave.Click += new System.EventHandler(this.btnAddPatDtl_Click);
@@ -2215,7 +2254,7 @@ namespace SHSCC.OPD.UI.Patient
             this.dateTimePicker1.Location = new System.Drawing.Point(528, 57);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(148, 35);
-            this.dateTimePicker1.TabIndex = 30;
+            this.dateTimePicker1.TabIndex = 3;
             this.dateTimePicker1.Value = new System.DateTime(2022, 6, 16, 0, 0, 0, 0);
             // 
             // tbname
@@ -2226,7 +2265,7 @@ namespace SHSCC.OPD.UI.Patient
             this.tbname.Multiline = true;
             this.tbname.Name = "tbname";
             this.tbname.Size = new System.Drawing.Size(264, 37);
-            this.tbname.TabIndex = 32;
+            this.tbname.TabIndex = 1;
             // 
             // tbregno
             // 
@@ -2236,8 +2275,9 @@ namespace SHSCC.OPD.UI.Patient
             this.tbregno.Multiline = true;
             this.tbregno.Name = "tbregno";
             this.tbregno.Size = new System.Drawing.Size(182, 37);
-            this.tbregno.TabIndex = 31;
+            this.tbregno.TabIndex = 0;
             this.tbregno.TextChanged += new System.EventHandler(this.tbregno_TextChanged);
+            this.tbregno.Leave += new System.EventHandler(this.tbregno_Leave);
             // 
             // label1
             // 
@@ -2354,21 +2394,9 @@ namespace SHSCC.OPD.UI.Patient
             this.btnAddPat.Text = "ADD DETAILS";
             this.btnAddPat.UseVisualStyleBackColor = true;
             // 
-            // kryptonListBox1
+            // errorProvider1
             // 
-            this.kryptonListBox1.Location = new System.Drawing.Point(19, 20);
-            this.kryptonListBox1.Name = "kryptonListBox1";
-            this.kryptonListBox1.Size = new System.Drawing.Size(411, 317);
-            this.kryptonListBox1.TabIndex = 191;
-            this.kryptonListBox1.SelectedValueChanged += new System.EventHandler(this.kryptonListBox1_SelectedValueChanged);
-            // 
-            // kryptonRichTextBox1
-            // 
-            this.kryptonRichTextBox1.Location = new System.Drawing.Point(494, 23);
-            this.kryptonRichTextBox1.Name = "kryptonRichTextBox1";
-            this.kryptonRichTextBox1.Size = new System.Drawing.Size(466, 314);
-            this.kryptonRichTextBox1.TabIndex = 193;
-            this.kryptonRichTextBox1.Text = "kryptonRichTextBox1";
+            this.errorProvider1.ContainerControl = this;
             // 
             // FrmAddNew
             // 
@@ -2418,7 +2446,6 @@ namespace SHSCC.OPD.UI.Patient
             this.tableLayoutPanel1.PerformLayout();
             this.tabPage2.ResumeLayout(false);
             this.tableLayoutPanel4.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.tabPage5.ResumeLayout(false);
@@ -2437,6 +2464,7 @@ namespace SHSCC.OPD.UI.Patient
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -2499,7 +2527,6 @@ namespace SHSCC.OPD.UI.Patient
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.ListBox listBoxAggra;
         private System.Windows.Forms.TabPage tabPage2;
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.TextBox tbComplaintSince;
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.Panel panel2;
@@ -2562,11 +2589,11 @@ namespace SHSCC.OPD.UI.Patient
         private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButton9;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.Label label36;
-        private System.Windows.Forms.Label label35;
         private System.Windows.Forms.TabPage tabPage6;
         private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButton10;
         private ComponentFactory.Krypton.Toolkit.KryptonRichTextBox kryptonRichTextBox1;
         private ComponentFactory.Krypton.Toolkit.KryptonListBox kryptonListBox1;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButton11;
     }
 }

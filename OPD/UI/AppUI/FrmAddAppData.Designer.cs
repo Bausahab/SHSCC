@@ -45,18 +45,16 @@ namespace SHSCC.OPD.UI.AppUI
             this.panel2.Controls.Add(this.textBox1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(479, 113);
+            this.panel2.Size = new System.Drawing.Size(359, 92);
             this.panel2.TabIndex = 175;
             // 
             // button3
             // 
             this.button3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.button3.Location = new System.Drawing.Point(0, 47);
-            this.button3.Margin = new System.Windows.Forms.Padding(4);
+            this.button3.Location = new System.Drawing.Point(0, 37);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(479, 39);
+            this.button3.Size = new System.Drawing.Size(359, 32);
             this.button3.TabIndex = 174;
             this.button3.Text = "SAVE";
             this.button3.UseVisualStyleBackColor = true;
@@ -68,10 +66,9 @@ namespace SHSCC.OPD.UI.AppUI
             this.button1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.button1.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.button1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.button1.Location = new System.Drawing.Point(0, 86);
-            this.button1.Margin = new System.Windows.Forms.Padding(4);
+            this.button1.Location = new System.Drawing.Point(0, 69);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(479, 27);
+            this.button1.Size = new System.Drawing.Size(359, 23);
             this.button1.TabIndex = 173;
             this.button1.Text = "Cancel";
             this.button1.UseVisualStyleBackColor = true;
@@ -81,21 +78,19 @@ namespace SHSCC.OPD.UI.AppUI
             this.textBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.textBox1.Font = new System.Drawing.Font("Arial Narrow", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox1.Location = new System.Drawing.Point(0, 0);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(479, 42);
+            this.textBox1.Size = new System.Drawing.Size(359, 35);
             this.textBox1.TabIndex = 0;
             // 
             // FrmAddAppData
             // 
             this.AcceptButton = this.button3;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.button1;
-            this.ClientSize = new System.Drawing.Size(479, 113);
+            this.ClientSize = new System.Drawing.Size(359, 92);
             this.Controls.Add(this.panel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FrmAddAppData";

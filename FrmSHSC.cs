@@ -27,13 +27,14 @@ namespace SHSCC
         {
 
             this.Controls.Remove(startup);
+            menuStrip1.Visible = true;
             ShowHomePage();
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
             ShowStartUpPage();
-           
+            menuStrip1.Visible = false;
         }
         void ShowStartUpPage()
         {
@@ -51,7 +52,7 @@ namespace SHSCC
         private void patientToolStripMenuItem_Click(object sender, EventArgs e)
         {
             homepage.Dispose();
-            OPD.UI.Patient.FrmAddNew frmAdd = new OPD.UI.Patient.FrmAddNew(0);
+            OPD.UI.Patient.FrmAddNew frmAdd = new OPD.UI.Patient.FrmAddNew(null);
             frmAdd.MdiParent = this;
             frmAdd.Dock = DockStyle.Fill;
             frmAdd.Show();
@@ -59,6 +60,11 @@ namespace SHSCC
         }
 
         private void patientToolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void patientToolStripMenuItem1_Click(object sender, EventArgs e)
         {
 
         }
