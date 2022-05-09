@@ -122,6 +122,12 @@
     <Compile Include="OPD\UI\Patient\FrmAddNew.Designer.cs">
       <DependentUpon>FrmAddNew.cs</DependentUpon>
     </Compile>
+    <Compile Include="OPD\UI\Patient\FrmViewAllPatient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OPD\UI\Patient\FrmViewAllPatient.Designer.cs">
+      <DependentUpon>FrmViewAllPatient.cs</DependentUpon>
+    </Compile>
     <Compile Include="OPD\UI\Patient\FrmViewPatient.cs">
       <SubType>Form</SubType>
     </Compile>

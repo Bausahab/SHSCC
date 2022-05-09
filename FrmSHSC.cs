@@ -66,7 +66,9 @@ namespace SHSCC
 
         private void patientToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-
+            OPD.UI.Patient.FrmViewAllPatient vap = new OPD.UI.Patient.FrmViewAllPatient();
+            vap.MdiParent = this;
+            vap.Show();
         }
     }
 }

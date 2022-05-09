@@ -19,7 +19,8 @@ namespace SHSCC.OPD.UI.Patient
         //  DataModels.PatientImages ok;
         // ShsccDbContext dbcontext;
         OPD.UI.AppUI.FrmAddAppData ShowAddAppData;
-       string CurrentPatientRegno { get; set; }
+        string CurrentPatientRegno { get; set; }
+        Boolean NEWPATIENT = true;
         public FrmAddNew()
         {
             InitializeComponent();
@@ -31,6 +32,8 @@ namespace SHSCC.OPD.UI.Patient
                 patentoadd = new DataModels.PatientModel();
                 patentoadd = Data.LoadedDataFiles.AllPatients.Find(u => u.RegNo == regNo);
 
+
+                displayPatient(patentoadd);
             }
             else
             {
@@ -41,11 +44,12 @@ namespace SHSCC.OPD.UI.Patient
 
         private void FrmAddNew_Load(object sender, EventArgs e)
         {
-          //  errorProvider1.Clear();
-
+            //  errorProvider1.Clear();
+            dateTimePicker1.Value = DateTime.Now;
+            NEWPATIENT = true;
             tabControl1.Enabled = false;
-           // dataGridView1.DataSource = Data.LoadedDataFiles.AllAppointments.ToList();
-            
+            // dataGridView1.DataSource = Data.LoadedDataFiles.AllAppointments.ToList();
+
         }
 
 
@@ -66,6 +70,7 @@ namespace SHSCC.OPD.UI.Patient
         private void CbComp_DropDown(object sender, EventArgs e)
         {
             CbComp.DataSource = DataModels.AppData.LoadData(DataModels.ModelTypes.Complaint);
+
         }
         private void CbDis_DropDown(object sender, EventArgs e)
         {
@@ -107,12 +112,18 @@ namespace SHSCC.OPD.UI.Patient
                 errorProvider1.Clear();
                 await Task.Run(() =>
                 {
-                    patentoadd = new DataModels.PatientModel();
-                    patentoadd.RegNo = tbregno.Text;
-                    patentoadd.Name = tbname.Text;
-                    patentoadd.DateReg = dateTimePicker1.Value.Date;
 
-                    appont = new DataModels.Appointments();
+                    if (NEWPATIENT)
+                    {
+                        patentoadd = new PatientModel();
+                        patentoadd.RegNo = tbregno.Text;
+                        patentoadd.Name = tbname.Text;
+                        patentoadd.DateReg = dateTimePicker1.Value.Date;
+                    }
+                  
+
+
+                    appont = new Appointments();
                     appont.AppointmentDate = dateTimePicker1.Value;
                     appont.AppointmentNext = dateTimePicker1.Value.AddDays(10);
 
@@ -123,11 +134,14 @@ namespace SHSCC.OPD.UI.Patient
                 {
                     Invoke(new Action(() =>
                     {
+                        Form_Alert form_Alert2 = new Form_Alert();
+                        form_Alert2.showAlert("New Date Added", Form_Alert.enmType.Info);
+                        displayPatient(patentoadd);
                         enableTabs();
                     }));
                 });
             }
-           
+
         }
 
         private void tbregno_TextChanged(object sender, EventArgs e)
@@ -202,6 +216,7 @@ namespace SHSCC.OPD.UI.Patient
                 ValueArray[i] = checkedListBox1.CheckedItems[i].ToString();
             }
             listBoxAmmu.Items.AddRange(ValueArray);
+            clearCheckedList();
         }
 
         private void aggravationToolStripMenuItem_Click(object sender, EventArgs e)
@@ -214,6 +229,7 @@ namespace SHSCC.OPD.UI.Patient
                 ValueArray[i] = checkedListBox1.CheckedItems[i].ToString();
             }
             listBoxAggra.Items.AddRange(ValueArray);
+            clearCheckedList();
         }
 
         private void bothToolStripMenuItem_Click(object sender, EventArgs e)
@@ -221,17 +237,29 @@ namespace SHSCC.OPD.UI.Patient
 
             int uu = checkedListBox1.CheckedItems.Count;
             string[] ValueArray = new string[uu];
+          
             for (int i = 0; i < uu; i++)
             {
                 ValueArray[i] = checkedListBox1.CheckedItems[i].ToString();
+                
             }
             listBoxAmmu.Items.AddRange(ValueArray);
             listBoxAggra.Items.AddRange(ValueArray);
+            clearCheckedList();
+        }
+
+        public void clearCheckedList()
+        {
+            for (int i = 0; i < checkedListBox1.Items.Count; i++)
+            {
+                checkedListBox1.SetItemChecked(i, false);
+
+            }
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            foreach(string ok in listBoxAmmu.Items)
+            foreach (string ok in listBoxAmmu.Items)
             {
                 patentoadd.ModEmmu.Add(ok);
             }
@@ -243,7 +271,7 @@ namespace SHSCC.OPD.UI.Patient
 
         }
 
-        private  void btnSaveRegDtl_Click(object sender, EventArgs e)
+        private void btnSaveRegDtl_Click(object sender, EventArgs e)
         {
             try
             {
@@ -273,8 +301,8 @@ namespace SHSCC.OPD.UI.Patient
                 {
                     patentoadd.Address = tbaddress.Text;
                 }
-                
-              // await SHSCCTextDataOperationTasks.CreatePatient(tbregno.Text + ".json", JsonConvert.SerializeObject(patentoadd));
+
+                // await SHSCCTextDataOperationTasks.CreatePatient(tbregno.Text + ".json", JsonConvert.SerializeObject(patentoadd));
             }
             catch (Exception uu)
             {
@@ -283,7 +311,7 @@ namespace SHSCC.OPD.UI.Patient
 
         }
 
-        private  void btnSaveDiaDtl_Click(object sender, EventArgs e)
+        private void btnSaveDiaDtl_Click(object sender, EventArgs e)
         {
             DataModels.Diagnostics di = new DataModels.Diagnostics();
             if (!String.IsNullOrEmpty(tbRptSumery.Text))
@@ -313,14 +341,14 @@ namespace SHSCC.OPD.UI.Patient
             if (!string.IsNullOrEmpty(CbBody.Text))
                 di.BodyPart = CbBody.Text;
             appont.DiagnosedOnAppointment = di;
-            patentoadd.AppointmentsForPatient.Add(appont);
+            //  patentoadd.AppointmentsForPatient.Add(appont);  todo i had commit it
             //await SHSCCTextDataOperationTasks.CreatePatient(tbregno.Text + ".json", JsonConvert.SerializeObject(patentoadd));
 
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
-          
+
             SHSCCTextDataOperationTasks.CreatePatient(tbregno.Text + ".json", JsonConvert.SerializeObject(patentoadd));
 
             Form_Alert form_Alert2 = new Form_Alert();
@@ -347,11 +375,11 @@ namespace SHSCC.OPD.UI.Patient
         }
 
 
-       
+
 
         private void Lbldate_Click(object sender, EventArgs e)
         {
-          
+
         }
 
         private void kryptonButton10_Click(object sender, EventArgs e)
@@ -375,20 +403,21 @@ namespace SHSCC.OPD.UI.Patient
         {
             appont.MedicineName = textBox1.Text;
             appont.MedicinePotential = textBox2.Text;
+            addPriceptionData();
 
             ////var jook = ProdList.Select(b => new { b.ID, b.ProductName, b.ProductSize, b.UnitsCount }).SingleOrDefault(u=>u.ID == 1);
             //patentoadd.AppointmentsForPatient.Select(a=> a.AppointmentDate
             //{
-                
+
             //}).ToList();
-         //   dataGridView1.DataSource = patentoadd.AppointmentsForPatient.ToList();
+            //   dataGridView1.DataSource = patentoadd.AppointmentsForPatient.ToList();
         }
 
         private void button9_Click(object sender, EventArgs e)
         {
             if (openFileDialog1.ShowDialog(this) == DialogResult.OK)
             {
-               // pictureBox2.ImageLocation = openFileDialog1.FileName;
+                // pictureBox2.ImageLocation = openFileDialog1.FileName;
                 appont.DeaseaseImagesForPatient.Add(openFileDialog1.FileName);
                 updateDiagnosUI();
 
@@ -399,7 +428,7 @@ namespace SHSCC.OPD.UI.Patient
         {
             if (openFileDialog1.ShowDialog(this) == DialogResult.OK)
             {
-               // pictureBox3.ImageLocation = openFileDialog1.FileName;
+                // pictureBox3.ImageLocation = openFileDialog1.FileName;
                 appont.ReportImagesForPatient.Add(openFileDialog1.FileName);
                 updateDiagnosUI();
             }
@@ -415,28 +444,29 @@ namespace SHSCC.OPD.UI.Patient
             {
                 pictureBox2.ImageLocation = appont.DeaseaseImagesForPatient[currentDeasindex];
             }
-          
+
             kryptonButton6.Text = "" + (currentDeasindex + 1);
         }
-     
+
         public void changeReportImg()
         {
 
             if (currentReportindex >= 0 && currentReportindex < appont.ReportImagesForPatient.Count)
             {
                 pictureBox3.ImageLocation = appont.ReportImagesForPatient[currentReportindex];
-            }   
+            }
             kryptonButton7.Text = "" + (currentReportindex + 1);
         }
 
 
         public void updateDiagnosUI()
         {
-
+            pictureBox3.ImageLocation = null;
+            pictureBox2.ImageLocation = null;
             int deasimg = appont.DeaseaseImagesForPatient.Count();
             int reportimg = appont.ReportImagesForPatient.Count();
 
-            label26.Text = "Desease image {"+ deasimg +"}";
+            label26.Text = "Desease image {" + deasimg + "}";
             label27.Text = "Report image {" + reportimg + "}";
 
 
@@ -446,7 +476,7 @@ namespace SHSCC.OPD.UI.Patient
             changeReportImg();
 
 
-            
+
         }
 
         private void tableLayoutPanel6_Paint(object sender, PaintEventArgs e)
@@ -456,7 +486,7 @@ namespace SHSCC.OPD.UI.Patient
 
         private void kryptonButton4_Click(object sender, EventArgs e)
         {
-            if(currentDeasindex > 0 )
+            if (currentDeasindex > 0)
             {
                 --currentDeasindex;
                 changeDeasImg();
@@ -466,7 +496,7 @@ namespace SHSCC.OPD.UI.Patient
 
         private void kryptonButton5_Click(object sender, EventArgs e)
         {
-            if (currentDeasindex < appont.DeaseaseImagesForPatient.Count-1)
+            if (currentDeasindex < appont.DeaseaseImagesForPatient.Count - 1)
             {
                 ++currentDeasindex;
                 changeDeasImg();
@@ -484,7 +514,7 @@ namespace SHSCC.OPD.UI.Patient
 
         private void kryptonButton9_Click(object sender, EventArgs e)
         {
-            if (currentReportindex < appont.ReportImagesForPatient.Count -1)
+            if (currentReportindex < appont.ReportImagesForPatient.Count - 1)
             {
                 ++currentReportindex;
                 changeReportImg();
@@ -494,27 +524,29 @@ namespace SHSCC.OPD.UI.Patient
 
         private void tbregno_Leave(object sender, EventArgs e)
         {
-            
+
             if (!(string.IsNullOrEmpty(tbregno.Text)))
             {
-              string paitientfilepth =  Path.Combine(Properties.Settings.Default.DefaultDir, "SHSCCDataBase\\Patient\\" + tbregno.Text + ".json");
+                string paitientfilepth = Path.Combine(Properties.Settings.Default.DefaultDir, "SHSCCDataBase\\Patient\\" + tbregno.Text + ".json");
                 string patientdata = SHSCCTextDataOperationTasks.ReadPatient(paitientfilepth);
 
 
                 if (patientdata != null)
                 {
                     Form_Alert form_Alert1 = new Form_Alert();
-                    form_Alert1.showAlert($"Reg No.{tbregno.Text} Already Exist",Form_Alert.enmType.Info);
-                  
+                    form_Alert1.showAlert($"Reg No.{tbregno.Text} Already Exist", Form_Alert.enmType.Info);
+
                     displayPatient(JsonConvert.DeserializeObject<PatientModel>(patientdata));
                 }
             }
-          
+
         }
 
 
         public void displayPatient(PatientModel patientModel)
         {
+
+            NEWPATIENT = false;
             //patentoadd
             patentoadd = patientModel;
             tbname.Text = patientModel.Name;
@@ -534,40 +566,184 @@ namespace SHSCC.OPD.UI.Patient
                 MessageBox.Show(this, "Image Not Found Exception " + e);
             }
             addDiagnosDate();
-
-
+            addMobilityData();
+            addPriceptionData();
+            addDieaseImageData();
         }
 
         public void addDiagnosDate()
         {
             this.flowLayoutPanel1.Controls.Clear();
-            
-            foreach(var appointments in patentoadd.AppointmentsForPatient.Select((value,i)=> new {i,value }))
+
+            Label lbldate = new System.Windows.Forms.Label();
+            lbldate.AutoSize = true;
+            lbldate.Location = new System.Drawing.Point(6, 10);
+            lbldate.Margin = new System.Windows.Forms.Padding(2, 10, 2, 0);
+
+            lbldate.Size = new System.Drawing.Size(64, 20);
+            lbldate.TabIndex = 0;
+            lbldate.Text = "Dates: ";
+            flowLayoutPanel1.Controls.Add(lbldate);
+
+            foreach (var appointments in patentoadd.AppointmentsForPatient.Select((value, i) => new { i, value }))
             {
-                DateBtn dateBtn = new DateBtn(appointments.value.AppointmentDate,appointments.i);
+                DateBtn dateBtn = new DateBtn(appointments.value.AppointmentDate, appointments.i);
+                dateBtn.datebtn_Click = changeAppointmentView;
                 this.flowLayoutPanel1.Controls.Add(dateBtn);
 
                 appont = appointments.value;
+             
             }
+            displayDiagnoseData();
             // 
-           
+
         }
 
+        public void addDieaseImageData()
+        {
+            this.flowLayoutPanel2.Controls.Clear();
+
+            Label lbldate = new System.Windows.Forms.Label();
+            lbldate.AutoSize = true;
+            lbldate.Location = new System.Drawing.Point(6, 10);
+            lbldate.Margin = new System.Windows.Forms.Padding(2, 10, 2, 0);
+
+            lbldate.Size = new System.Drawing.Size(64, 20);
+            lbldate.TabIndex = 0;
+            lbldate.Text = "Dates: ";
+            flowLayoutPanel2.Controls.Add(lbldate);
+
+            foreach (var appointments in patentoadd.AppointmentsForPatient.Select((value, i) => new { i, value }))
+            {
+                DateBtn dateBtn = new DateBtn(appointments.value.AppointmentDate, appointments.i);
+                dateBtn.datebtn_Click = changeAppointmentViewDieasae;
+                this.flowLayoutPanel2.Controls.Add(dateBtn);
+
+               // appont = appointments.value;
+               
+            }
+
+            label35.Text = String.Format("Selected Date: {0:yy/MM/dd}", appont.AppointmentDate);
+            updateDiagnosUI();
+
+        }
+
+        private void changeAppointmentViewDieasae(object sender, int e)
+        {
+            appont = patentoadd.AppointmentsForPatient[e];
+            label35.Text = String.Format("Selected Date: {0:yy/MM/dd}", appont.AppointmentDate);
+            updateDiagnosUI();
+          
+        }
+
+      
+
+        public void addMobilityData()
+        {
+
+            listBoxAmmu.Items.Clear();
+            listBoxAggra.Items.Clear();
+            foreach (var ok in patentoadd.ModEmmu.ToList())
+            {
+                listBoxAmmu.Items.Add(ok);
+            }
+
+            foreach (var ok in patentoadd.ModAggra.ToList())
+            {
+                listBoxAggra.Items.Add(ok);
+               
+            }
+        }
+
+
+        public void addPriceptionData()
+        {
+            dateTimePicker2.Value = appont.AppointmentNext;
+            textBox1.Text = appont.MedicineName;
+            textBox2.Text = appont.MedicinePotential;
+            dataGridView1.Rows.Clear();
+
+            foreach (var appointments in patentoadd.AppointmentsForPatient.Select((value, i) => new { i, value }))
+            {
+                var ap = appointments.value;
+                dataGridView1.Rows.Add(appointments.i+1,
+                     String.Format(" {0:yy/MM/dd}", ap.AppointmentDate),
+                      String.Format(" {0:yy/MM/dd}", ap.AppointmentNext),ap.MedicineName,ap.MedicinePotential);
+                
+            }
+            StyleDataGridView();
+        }
+
+
+        public void StyleDataGridView()
+        {
+            dataGridView1.BorderStyle = BorderStyle.None;
+            dataGridView1.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(235, 237, 239);
+          //  dataGridView1.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
+            dataGridView1.DefaultCellStyle.SelectionBackColor = Color.SeaGreen;
+            dataGridView1.DefaultCellStyle.SelectionForeColor = Color.WhiteSmoke;
+            dataGridView1.BackgroundColor = Color.FromArgb(174, 182, 191);
+            dataGridView1.EnableHeadersVisualStyles = false;
+            
+            dataGridView1.Columns[3].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+        }
+
+
+
+        private void changeAppointmentView(object sender, int e)
+        {
+            appont = patentoadd.AppointmentsForPatient[e];
+            displayDiagnoseData();
+        }
 
         public void displayDiagnoseData()
         {
 
+
+            CbComp.DataSource = AppData.LoadData(ModelTypes.Complaint);
+            CbDis.DataSource = AppData.LoadData(ModelTypes.Discharge);
+            CbBody.DataSource = AppData.LoadData(ModelTypes.BodyPart);
+
+
+            tbRptSumery.Text = appont.DiagnosedOnAppointment.ReportSummery;
+            tbComplaintSince.Text = appont.DiagnosedOnAppointment.ComplaintSince;
+            tbFamHis.Text = appont.DiagnosedOnAppointment.Family;
+            Cbscab.Text = appont.DiagnosedOnAppointment.Scab;
+            tbpulse.Text = appont.DiagnosedOnAppointment.Pulse;
+            tbbp.Text = appont.DiagnosedOnAppointment.BP;
+            tbwate.Text = appont.DiagnosedOnAppointment.Weight.ToString();
+            Cbpain.Text = appont.DiagnosedOnAppointment.Pain;
+            CbComp.Text = appont.DiagnosedOnAppointment.ComplaintType;
+            Cbburn.Text = appont.DiagnosedOnAppointment.Burning;
+            CbDis.Text = appont.DiagnosedOnAppointment.Discharge;
+            Cbredness.Text = appont.DiagnosedOnAppointment.Redness;
+            CbBody.Text = appont.DiagnosedOnAppointment.BodyPart;
+            label34.Text = String.Format("Selected Date: {0:yy/MM/dd}", appont.AppointmentDate);
+            tabPage2.Invalidate();
         }
 
 
         public void enableTabs()
         {
             tabControl1.Enabled = true;
-            btnSave.Enabled = false;
-             CurrentPatientRegno = patentoadd.RegNo;
+           // btnSave.Enabled = false;
+            CurrentPatientRegno = patentoadd.RegNo;
         }
 
-      
+        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            listBoxAmmu.Items.RemoveAt(listBoxAmmu.SelectedIndex);
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            listBoxAggra.Items.RemoveAt(listBoxAggra.SelectedIndex);
+        }
     }
 
 

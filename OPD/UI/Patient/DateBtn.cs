@@ -13,6 +13,7 @@ namespace SHSCC.OPD.UI.Patient
     public partial class DateBtn : UserControl
     {
         DateTime appdate;
+        public EventHandler<int> datebtn_Click;
         int index;
         public DateBtn(DateTime dt,int ind)
         {
@@ -30,7 +31,7 @@ namespace SHSCC.OPD.UI.Patient
 
         private void instructionIcon_Click(object sender, EventArgs e)
         {
-
+            datebtn_Click?.Invoke(this,index);
         }
     }
 }
