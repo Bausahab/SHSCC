@@ -158,6 +158,9 @@
     <EmbeddedResource Include="OPD\UI\Patient\FrmAddNew.resx">
       <DependentUpon>FrmAddNew.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="OPD\UI\Patient\FrmViewAllPatient.resx">
+      <DependentUpon>FrmViewAllPatient.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="OPD\UI\Patient\FrmViewPatient.resx">
       <DependentUpon>FrmViewPatient.cs</DependentUpon>
     </EmbeddedResource>

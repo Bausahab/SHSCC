@@ -1,11 +1,12 @@
-﻿using System;
+﻿using SHSCC.OPD.Data;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace SHSCC.DataModels
 {
-    public class PatientModel
+    public class PatientModel : IPatientModel
     { 
         public DateTime DateReg { get; set; }
         public string RegNo { get; set; }
@@ -13,7 +14,7 @@ namespace SHSCC.DataModels
         public string CareOf { get; set; }
         public string Adhar { get; set; }
         public string Gender { get; set; }
-        public int Age { get; set; }
+        public int Age { get; set; } = 0;
         public string ContactNo { get; set; }
         public string Address { get; set; }
         public List<string> ModAggra { get; set; }
@@ -28,6 +29,7 @@ namespace SHSCC.DataModels
         }
 
     }
+
     public class Diagnostics
     {
         public string Scab { get; set; }

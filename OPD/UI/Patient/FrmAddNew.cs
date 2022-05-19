@@ -136,7 +136,11 @@ namespace SHSCC.OPD.UI.Patient
                     {
                         Form_Alert form_Alert2 = new Form_Alert();
                         form_Alert2.showAlert("New Date Added", Form_Alert.enmType.Info);
-                        displayPatient(patentoadd);
+                        if (!NEWPATIENT)
+                        {
+                            displayPatient(patentoadd);
+                        }
+                       
                         enableTabs();
                     }));
                 });
@@ -743,6 +747,11 @@ namespace SHSCC.OPD.UI.Patient
         private void button4_Click(object sender, EventArgs e)
         {
             listBoxAggra.Items.RemoveAt(listBoxAggra.SelectedIndex);
+        }
+
+        private void kryptonButton11_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 

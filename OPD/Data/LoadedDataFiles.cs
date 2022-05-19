@@ -11,4 +11,8 @@ namespace SHSCC.OPD.Data
         public static List<DataModels.PatientModel> AllPatients = new List<DataModels.PatientModel>();
         public static List<DataModels.Appointments> AllAppointments = new List<DataModels.Appointments>();
     }
+    public  interface IPatientModel
+    {
+        string RegNo { get; set; }
+    }
 }

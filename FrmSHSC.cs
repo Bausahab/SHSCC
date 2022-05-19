@@ -25,8 +25,8 @@ namespace SHSCC
 
         private void AppStartRequested(object sender, EventArgs e)
         {
-
-            this.Controls.Remove(startup);
+            startup.Dispose();
+           // this.Controls.Remove(startup);
             menuStrip1.Visible = true;
             ShowHomePage();
         }
