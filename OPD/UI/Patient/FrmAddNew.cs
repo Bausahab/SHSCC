@@ -41,11 +41,11 @@ namespace SHSCC.OPD.UI.Patient
             }
 
         }
-        public FrmAddNew(PatientModel pt) : this()
-        {
-            displayPatient(pt);
+        //public FrmAddNew(PatientModel pt) : this()
+        //{
+        //    displayPatient(pt);
 
-        }
+        //}
 
         private void FrmAddNew_Load(object sender, EventArgs e)
         {
