@@ -1,4 +1,7 @@
-﻿using System.IO;
+﻿using Newtonsoft.Json;
+using SHSCC.DataModels;
+using System.Collections.Generic;
+using System.IO;
 using System.Threading.Tasks;
 
 namespace SHSCC
@@ -52,6 +55,7 @@ namespace SHSCC
             }
             return Task.FromResult(res);
         }
+
         public static  string ReadPatient(string pthh)
         {
            // string pthh = Path.Combine(Properties.Settings.Default.DefaultDir, "SHSCCDataBase\\Patient\\" + RegnoASfilename + ".json");
@@ -68,6 +72,26 @@ namespace SHSCC
         {
             string[] fileArray = Directory.GetFiles(DirName, "*.json");
             return fileArray;
+        }
+
+        public static List<PatientModel> getPatientList()
+        {
+            List<PatientModel> patientList = new List<PatientModel>();
+    
+            string[] fileArray = GetAllFiles(Path.Combine(Properties.Settings.Default.DefaultDir, "SHSCCDataBase\\Patient\\"));
+
+         
+            foreach (string filename in fileArray)
+            {
+             //  string filename1 =  Path.Combine(Properties.Settings.Default.DefaultDir, "SHSCCDataBase\\Patient\\" + filename );
+                string patientstr =   ReadPatient(filename);
+                if (patientstr != null)
+                {
+                    patientList.Add( JsonConvert.DeserializeObject<PatientModel>(patientstr));
+                }
+
+            }
+           return patientList;
         }
         
 

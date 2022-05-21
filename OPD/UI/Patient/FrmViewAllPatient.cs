@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SHSCC.DataModels;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,6 +13,7 @@ namespace SHSCC.OPD.UI.Patient
 {
     public partial class FrmViewAllPatient : Form
     {
+        List<PatientModel> patientModels = new List<PatientModel>();
         public FrmViewAllPatient()
         {
             InitializeComponent();
@@ -36,11 +38,30 @@ namespace SHSCC.OPD.UI.Patient
 
         private void FrmViewAllPatient_Load(object sender, EventArgs e)
         {
+            patientModels = SHSCCTextDataOperationTasks.getPatientList();
 
-           
             StyleDataGridView();
-            this.dataGridView1.DataSource = OPD.Data.LoadedDataFiles.AllPatients.ToList();
 
+            foreach (var patient in patientModels.Select((value, i) => new { i, value }))
+            {
+                var ap = patient.value;
+                dataGridView1.Rows.Add(patient.i + 1,
+                     ap.RegNo
+                    , ap.Name, ap.ContactNo, ap.Adhar,ap.Gender,ap.Age);
+
+            }
+
+
+        }
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            var senderGrid = (DataGridView)sender;
+
+            if (senderGrid.Columns[e.ColumnIndex] is DataGridViewButtonColumn)
+            {
+               var ok = patientModels[e.RowIndex];
+                //TODO - FrmAddNew(ok)
+            }
         }
 
         private void kryptonButton11_Click(object sender, EventArgs e)
