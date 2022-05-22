@@ -60,7 +60,11 @@ namespace SHSCC.OPD.UI.Patient
             if (senderGrid.Columns[e.ColumnIndex] is DataGridViewButtonColumn)
             {
                var ok = patientModels[e.RowIndex];
-                //TODO - FrmAddNew(ok.RegNo)
+                
+                
+                FrmAddNew frmAdd = new FrmAddNew(ok);
+                frmAdd.Show();
+                this.Dispose();
             }
         }
 

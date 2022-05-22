@@ -2383,7 +2383,7 @@ namespace SHSCC.OPD.UI.Patient
             0,
             0});
             this.numericUpDownAge.Minimum = new decimal(new int[] {
-            1,
+            0,
             0,
             0,
             0});

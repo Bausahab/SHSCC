@@ -25,15 +25,12 @@ namespace SHSCC.OPD.UI.Patient
         {
             InitializeComponent();
         }
-        public FrmAddNew(string regNo) : this()
+        public FrmAddNew(PatientModel patemodel) : this()
         {
-            if (regNo != null)
+            if (patemodel != null)
             {
-                patentoadd = new DataModels.PatientModel();
-                patentoadd = Data.LoadedDataFiles.AllPatients.Find(u => u.RegNo == regNo);
 
-
-                displayPatient(patentoadd);
+                displayPatient(patemodel);
             }
             else
             {
@@ -558,16 +555,18 @@ namespace SHSCC.OPD.UI.Patient
             NEWPATIENT = false;
             //patentoadd
             patentoadd = patientModel;
+            tbregno.Text = patientModel.RegNo;
             tbname.Text = patientModel.Name;
             enableTabs();
             tbCo.Text = patientModel.CareOf;
             tbAdahr.Text = patientModel.Adhar;
             cbgen.Text = patientModel.Gender;
-            numericUpDownAge.Value = patientModel.Age;
+         
             tbcont.Text = patientModel.ContactNo;
             tbaddress.Text = patientModel.Address;
             try
             {
+                numericUpDownAge.Value = patientModel.Age;
                 pictureBox1.ImageLocation = patientModel.Image;
             }
             catch (Exception e)
