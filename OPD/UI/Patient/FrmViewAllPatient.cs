@@ -13,6 +13,7 @@ namespace SHSCC.OPD.UI.Patient
 {
     public partial class FrmViewAllPatient : Form
     {
+        public EventHandler<DataModels.PatientModel> PatientViewRequested;
         List<PatientModel> patientModels = new List<PatientModel>();
         public FrmViewAllPatient()
         {
@@ -60,11 +61,9 @@ namespace SHSCC.OPD.UI.Patient
             if (senderGrid.Columns[e.ColumnIndex] is DataGridViewButtonColumn)
             {
                var ok = patientModels[e.RowIndex];
-                
-                
-                FrmAddNew frmAdd = new FrmAddNew(ok);
-                frmAdd.Show();
-                this.Dispose();
+
+                PatientViewRequested?.Invoke(this, ok);
+             
             }
         }
 
