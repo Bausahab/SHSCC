@@ -84,16 +84,18 @@ namespace SHSCC
             foreach (string filename in fileArray)
             {
              //  string filename1 =  Path.Combine(Properties.Settings.Default.DefaultDir, "SHSCCDataBase\\Patient\\" + filename );
-                string patientstr =   ReadPatient(filename);
+                string patientstr =  ReadPatient(filename);
                 if (patientstr != null)
                 {
                     patientList.Add( JsonConvert.DeserializeObject<PatientModel>(patientstr));
                 }
 
             }
-           return patientList;
+            OPD.Data.LoadedDataFiles.AllPatients.Clear();
+            OPD.Data.LoadedDataFiles.AllPatients.AddRange(patientList);
+            return OPD.Data.LoadedDataFiles.AllPatients;
         }
-        
+
 
     }
 }

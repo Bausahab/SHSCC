@@ -14,7 +14,7 @@ namespace SHSCC.OPD.UI.Patient
     public partial class FrmViewAllPatient : Form
     {
         public EventHandler<DataModels.PatientModel> PatientViewRequested;
-        List<PatientModel> patientModels = new List<PatientModel>();
+        //List<PatientModel> Data.LoadedDataFiles.AllPatients = new List<PatientModel>();
         public FrmViewAllPatient()
         {
             InitializeComponent();
@@ -39,11 +39,11 @@ namespace SHSCC.OPD.UI.Patient
 
         private void FrmViewAllPatient_Load(object sender, EventArgs e)
         {
-            patientModels = SHSCCTextDataOperationTasks.getPatientList();
+            Data.LoadedDataFiles.AllPatients = SHSCCTextDataOperationTasks.getPatientList();
 
             StyleDataGridView();
 
-            foreach (var patient in patientModels.Select((value, i) => new { i, value }))
+            foreach (var patient in Data.LoadedDataFiles.AllPatients.Select((value, i) => new { i, value }))
             {
                 var ap = patient.value;
                 dataGridView1.Rows.Add(patient.i + 1,
@@ -60,7 +60,7 @@ namespace SHSCC.OPD.UI.Patient
 
             if (senderGrid.Columns[e.ColumnIndex] is DataGridViewButtonColumn)
             {
-               var ok = patientModels[e.RowIndex];
+               var ok = Data.LoadedDataFiles.AllPatients[e.RowIndex];
 
                 PatientViewRequested?.Invoke(this, ok);
              
@@ -69,7 +69,23 @@ namespace SHSCC.OPD.UI.Patient
 
         private void kryptonButton11_Click(object sender, EventArgs e)
         {
-            this.Close();
+           // this.Close();
+        }
+
+        private void FrmViewAllPatient_Activated(object sender, EventArgs e)
+        {
+            Data.LoadedDataFiles.AllPatients = SHSCCTextDataOperationTasks.getPatientList();
+
+            StyleDataGridView();
+
+            foreach (var patient in Data.LoadedDataFiles.AllPatients.Select((value, i) => new { i, value }))
+            {
+                var ap = patient.value;
+                dataGridView1.Rows.Add(patient.i + 1,
+                     ap.RegNo
+                    , ap.Name, ap.ContactNo, ap.Adhar, ap.Gender, ap.Age);
+
+            }
         }
     }
 }
