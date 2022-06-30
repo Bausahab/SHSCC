@@ -39,7 +39,7 @@ namespace SHSCC.OPD.UI.Patient
             Data.LoadedDataFiles.AllPatients = SHSCCTextDataOperationTasks.getPatientList();
 
             StyleDataGridView();
-            setdatatoTable(patientModels);
+            setdatatoTable(Data.LoadedDataFiles.AllPatients);
 
 
 
@@ -53,7 +53,7 @@ namespace SHSCC.OPD.UI.Patient
             {
                 try
                 {
-                    var ok = patientModels[e.RowIndex];
+                    var ok = Data.LoadedDataFiles.AllPatients[e.RowIndex];
 
 
                     FrmAddNew frmAdd = new FrmAddNew(ok);
@@ -94,7 +94,7 @@ namespace SHSCC.OPD.UI.Patient
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void button2_Click(object sender, EventArgs e)
         {
             string tosearch = tbname.Text.ToLower();
 
@@ -106,7 +106,7 @@ namespace SHSCC.OPD.UI.Patient
                     //todo check which tab is selected
                     List<PatientModel> fillterdCandi = new List<PatientModel>();
 
-                    foreach (PatientModel searchCandi in patientModels)
+                    foreach (PatientModel searchCandi in Data.LoadedDataFiles.AllPatients)
                     {
                         //Candidate Name , Enrollment , Ip address
                         string contactNO = searchCandi.ContactNo;
@@ -158,5 +158,7 @@ namespace SHSCC.OPD.UI.Patient
                 };
             }
         }
+
+      
     }
     }
