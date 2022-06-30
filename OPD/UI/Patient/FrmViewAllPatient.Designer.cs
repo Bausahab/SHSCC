@@ -29,15 +29,10 @@ namespace SHSCC.OPD.UI.Patient
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.kryptonButton11 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
-            this.label1 = new System.Windows.Forms.Label();
-            this.tbname = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
             this.sr_no = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.reg_no = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -46,6 +41,12 @@ namespace SHSCC.OPD.UI.Patient
             this.gender = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.age = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.addDetail = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.kryptonButton11 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.label1 = new System.Windows.Forms.Label();
+            this.tbname = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
@@ -72,14 +73,14 @@ namespace SHSCC.OPD.UI.Patient
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(182)))), ((int)(((byte)(191)))));
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.sr_no,
@@ -101,8 +102,78 @@ namespace SHSCC.OPD.UI.Patient
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
+            // sr_no
+            // 
+            this.sr_no.HeaderText = "Sr No.";
+            this.sr_no.MinimumWidth = 6;
+            this.sr_no.Name = "sr_no";
+            this.sr_no.ReadOnly = true;
+            this.sr_no.Width = 125;
+            // 
+            // reg_no
+            // 
+            this.reg_no.HeaderText = "Reg No.";
+            this.reg_no.MinimumWidth = 6;
+            this.reg_no.Name = "reg_no";
+            this.reg_no.ReadOnly = true;
+            this.reg_no.Width = 150;
+            // 
+            // name
+            // 
+            this.name.HeaderText = "Name";
+            this.name.MinimumWidth = 6;
+            this.name.Name = "name";
+            this.name.ReadOnly = true;
+            this.name.Width = 125;
+            // 
+            // contact
+            // 
+            this.contact.HeaderText = "Contact";
+            this.contact.MinimumWidth = 6;
+            this.contact.Name = "contact";
+            this.contact.ReadOnly = true;
+            this.contact.Width = 200;
+            // 
+            // aadharCard
+            // 
+            this.aadharCard.HeaderText = "Aadhar Card";
+            this.aadharCard.MinimumWidth = 6;
+            this.aadharCard.Name = "aadharCard";
+            this.aadharCard.ReadOnly = true;
+            this.aadharCard.Width = 200;
+            // 
+            // gender
+            // 
+            this.gender.HeaderText = "Gender";
+            this.gender.MinimumWidth = 6;
+            this.gender.Name = "gender";
+            this.gender.ReadOnly = true;
+            this.gender.Width = 125;
+            // 
+            // age
+            // 
+            this.age.HeaderText = "Age";
+            this.age.MinimumWidth = 6;
+            this.age.Name = "age";
+            this.age.ReadOnly = true;
+            this.age.Width = 125;
+            // 
+            // addDetail
+            // 
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.Padding = new System.Windows.Forms.Padding(2);
+            this.addDetail.DefaultCellStyle = dataGridViewCellStyle4;
+            this.addDetail.HeaderText = "Add Details";
+            this.addDetail.MinimumWidth = 6;
+            this.addDetail.Name = "addDetail";
+            this.addDetail.ReadOnly = true;
+            this.addDetail.Text = "Add/View";
+            this.addDetail.UseColumnTextForButtonValue = true;
+            this.addDetail.Width = 125;
+            // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.kryptonButton11);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.tbname);
@@ -187,7 +258,7 @@ namespace SHSCC.OPD.UI.Patient
             this.tbname.Margin = new System.Windows.Forms.Padding(4);
             this.tbname.Multiline = true;
             this.tbname.Name = "tbname";
-            this.tbname.Size = new System.Drawing.Size(341, 45);
+            this.tbname.Size = new System.Drawing.Size(285, 45);
             this.tbname.TabIndex = 30;
             // 
             // label3
@@ -199,78 +270,22 @@ namespace SHSCC.OPD.UI.Patient
             this.label3.Location = new System.Drawing.Point(1125, 22);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(94, 33);
+            this.label3.Size = new System.Drawing.Size(101, 33);
             this.label3.TabIndex = 31;
-            this.label3.Text = "Search";
+            this.label3.Text = "Search ";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
-            // sr_no
+            // button1
             // 
-            this.sr_no.HeaderText = "Sr No.";
-            this.sr_no.MinimumWidth = 6;
-            this.sr_no.Name = "sr_no";
-            this.sr_no.ReadOnly = true;
-            this.sr_no.Width = 125;
-            // 
-            // reg_no
-            // 
-            this.reg_no.HeaderText = "Reg No.";
-            this.reg_no.MinimumWidth = 6;
-            this.reg_no.Name = "reg_no";
-            this.reg_no.ReadOnly = true;
-            this.reg_no.Width = 150;
-            // 
-            // name
-            // 
-            this.name.HeaderText = "Name";
-            this.name.MinimumWidth = 6;
-            this.name.Name = "name";
-            this.name.ReadOnly = true;
-            this.name.Width = 125;
-            // 
-            // contact
-            // 
-            this.contact.HeaderText = "Contact";
-            this.contact.MinimumWidth = 6;
-            this.contact.Name = "contact";
-            this.contact.ReadOnly = true;
-            this.contact.Width = 200;
-            // 
-            // aadharCard
-            // 
-            this.aadharCard.HeaderText = "Aadhar Card";
-            this.aadharCard.MinimumWidth = 6;
-            this.aadharCard.Name = "aadharCard";
-            this.aadharCard.ReadOnly = true;
-            this.aadharCard.Width = 200;
-            // 
-            // gender
-            // 
-            this.gender.HeaderText = "Gender";
-            this.gender.MinimumWidth = 6;
-            this.gender.Name = "gender";
-            this.gender.ReadOnly = true;
-            this.gender.Width = 125;
-            // 
-            // age
-            // 
-            this.age.HeaderText = "Age";
-            this.age.MinimumWidth = 6;
-            this.age.Name = "age";
-            this.age.ReadOnly = true;
-            this.age.Width = 125;
-            // 
-            // addDetail
-            // 
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.Padding = new System.Windows.Forms.Padding(2);
-            this.addDetail.DefaultCellStyle = dataGridViewCellStyle2;
-            this.addDetail.HeaderText = "Add Details";
-            this.addDetail.MinimumWidth = 6;
-            this.addDetail.Name = "addDetail";
-            this.addDetail.ReadOnly = true;
-            this.addDetail.Text = "Add/View";
-            this.addDetail.UseColumnTextForButtonValue = true;
-            this.addDetail.Width = 125;
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button1.BackColor = System.Drawing.Color.Coral;
+            this.button1.Location = new System.Drawing.Point(1423, 54);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 45);
+            this.button1.TabIndex = 34;
+            this.button1.Text = "GO";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // FrmViewAllPatient
             // 
@@ -313,5 +328,6 @@ namespace SHSCC.OPD.UI.Patient
         private System.Windows.Forms.DataGridViewTextBoxColumn gender;
         private System.Windows.Forms.DataGridViewTextBoxColumn age;
         private System.Windows.Forms.DataGridViewButtonColumn addDetail;
+        private System.Windows.Forms.Button button1;
     }
 }
