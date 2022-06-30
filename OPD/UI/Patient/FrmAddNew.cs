@@ -34,7 +34,10 @@ namespace SHSCC.OPD.UI.Patient
             }
             else
             {
-                //fill all data 
+                dateTimePicker1.Value = DateTime.Now;
+                NEWPATIENT = true;
+                tabControl1.Enabled = false;
+                btnDelRec.Visible = false;
             }
 
         }
@@ -46,10 +49,11 @@ namespace SHSCC.OPD.UI.Patient
 
         private void FrmAddNew_Load(object sender, EventArgs e)
         {
+
             //  errorProvider1.Clear();
-            dateTimePicker1.Value = DateTime.Now;
-            NEWPATIENT = true;
-            tabControl1.Enabled = false;
+            //dateTimePicker1.Value = DateTime.Now;
+            //NEWPATIENT = true;
+            //tabControl1.Enabled = false;
             // dataGridView1.DataSource = Data.LoadedDataFiles.AllAppointments.ToList();
 
         }
@@ -122,7 +126,7 @@ namespace SHSCC.OPD.UI.Patient
                         patentoadd.Name = tbname.Text;
                         patentoadd.DateReg = dateTimePicker1.Value.Date;
                     }
-                  
+
 
 
                     appont = new Appointments();
@@ -142,7 +146,7 @@ namespace SHSCC.OPD.UI.Patient
                         {
                             displayPatient(patentoadd);
                         }
-                       
+
                         enableTabs();
                     }));
                 });
@@ -243,11 +247,11 @@ namespace SHSCC.OPD.UI.Patient
 
             int uu = checkedListBox1.CheckedItems.Count;
             string[] ValueArray = new string[uu];
-          
+
             for (int i = 0; i < uu; i++)
             {
                 ValueArray[i] = checkedListBox1.CheckedItems[i].ToString();
-                
+
             }
             listBoxAmmu.Items.AddRange(ValueArray);
             listBoxAggra.Items.AddRange(ValueArray);
@@ -553,6 +557,8 @@ namespace SHSCC.OPD.UI.Patient
         {
 
             NEWPATIENT = false;
+            btnDelRec.Visible = true;
+            btnSave.Visible = false;
             //patentoadd
             patentoadd = patientModel;
             tbregno.Text = patientModel.RegNo;
@@ -561,7 +567,7 @@ namespace SHSCC.OPD.UI.Patient
             tbCo.Text = patientModel.CareOf;
             tbAdahr.Text = patientModel.Adhar;
             cbgen.Text = patientModel.Gender;
-         
+
             tbcont.Text = patientModel.ContactNo;
             tbaddress.Text = patientModel.Address;
             try
@@ -600,7 +606,7 @@ namespace SHSCC.OPD.UI.Patient
                 this.flowLayoutPanel1.Controls.Add(dateBtn);
 
                 appont = appointments.value;
-             
+
             }
             displayDiagnoseData();
             // 
@@ -627,8 +633,8 @@ namespace SHSCC.OPD.UI.Patient
                 dateBtn.datebtn_Click = changeAppointmentViewDieasae;
                 this.flowLayoutPanel2.Controls.Add(dateBtn);
 
-               // appont = appointments.value;
-               
+                // appont = appointments.value;
+
             }
 
             label35.Text = String.Format("Selected Date: {0:yy/MM/dd}", appont.AppointmentDate);
@@ -641,10 +647,10 @@ namespace SHSCC.OPD.UI.Patient
             appont = patentoadd.AppointmentsForPatient[e];
             label35.Text = String.Format("Selected Date: {0:yy/MM/dd}", appont.AppointmentDate);
             updateDiagnosUI();
-          
+
         }
 
-      
+
 
         public void addMobilityData()
         {
@@ -659,7 +665,7 @@ namespace SHSCC.OPD.UI.Patient
             foreach (var ok in patentoadd.ModAggra.ToList())
             {
                 listBoxAggra.Items.Add(ok);
-               
+
             }
         }
 
@@ -674,10 +680,10 @@ namespace SHSCC.OPD.UI.Patient
             foreach (var appointments in patentoadd.AppointmentsForPatient.Select((value, i) => new { i, value }))
             {
                 var ap = appointments.value;
-                dataGridView1.Rows.Add(appointments.i+1,
+                dataGridView1.Rows.Add(appointments.i + 1,
                      String.Format(" {0:yy/MM/dd}", ap.AppointmentDate),
-                      String.Format(" {0:yy/MM/dd}", ap.AppointmentNext),ap.MedicineName,ap.MedicinePotential);
-                
+                      String.Format(" {0:yy/MM/dd}", ap.AppointmentNext), ap.MedicineName, ap.MedicinePotential);
+
             }
             StyleDataGridView();
         }
@@ -687,12 +693,12 @@ namespace SHSCC.OPD.UI.Patient
         {
             dataGridView1.BorderStyle = BorderStyle.None;
             dataGridView1.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(235, 237, 239);
-          //  dataGridView1.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
+            //  dataGridView1.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
             dataGridView1.DefaultCellStyle.SelectionBackColor = Color.SeaGreen;
             dataGridView1.DefaultCellStyle.SelectionForeColor = Color.WhiteSmoke;
             dataGridView1.BackgroundColor = Color.FromArgb(174, 182, 191);
             dataGridView1.EnableHeadersVisualStyles = false;
-            
+
             dataGridView1.Columns[3].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
         }
 
@@ -734,7 +740,7 @@ namespace SHSCC.OPD.UI.Patient
         public void enableTabs()
         {
             tabControl1.Enabled = true;
-           // btnSave.Enabled = false;
+            // btnSave.Enabled = false;
             CurrentPatientRegno = patentoadd.RegNo;
         }
 
@@ -757,7 +763,31 @@ namespace SHSCC.OPD.UI.Patient
         {
             this.Close();
         }
+
+        private void btnDelRec_Click(object sender, EventArgs e)
+        {
+            string regnotodel = tbregno.Text.Trim();
+                if (regnotodel == "")
+                {
+                    MessageBox.Show("Registration Number is missing");
+                }
+                else
+                {
+                    string kk = Path.Combine(Properties.Settings.Default.DefaultDir, "SHSCCDataBase\\Patient\\" + regnotodel + ".json");
+                    var ok = File.Exists(Path.Combine(Properties.Settings.Default.DefaultDir, "SHSCCDataBase\\Patient\\" + regnotodel + ".json"));
+                    if (ok)
+                    {
+                        File.Delete(Path.Combine(Properties.Settings.Default.DefaultDir, "SHSCCDataBase\\Patient\\" + regnotodel + ".json"));
+                        OPD.Data.LoadedDataFiles.AllPatients.AddRange(SHSCCTextDataOperationTasks.getPatientList());
+                    }
+
+
+                    //
+                }
+                this.Dispose();
+            
+        }
     }
 
-
 }
+

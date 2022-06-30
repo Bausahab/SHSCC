@@ -1,4 +1,6 @@
-﻿using System;
+﻿using SHSCC.DataModels;
+using SHSCC.OPD.UI.Patient;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -66,9 +68,21 @@ namespace SHSCC
 
         private void patientToolStripMenuItem1_Click(object sender, EventArgs e)
         {
+            
             OPD.UI.Patient.FrmViewAllPatient vap = new OPD.UI.Patient.FrmViewAllPatient();
             vap.MdiParent = this;
+            vap.WindowState = FormWindowState.Maximized;
+            vap.PatientViewRequested = GeneratePatientView;
             vap.Show();
+        }
+
+        private void GeneratePatientView(object sender, PatientModel e)
+        {
+            FrmAddNew frmAdd = new FrmAddNew(e);
+            frmAdd.MdiParent = this;
+            frmAdd.WindowState = FormWindowState.Maximized;
+            frmAdd.Show();
+           
         }
     }
 }

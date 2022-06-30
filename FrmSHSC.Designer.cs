@@ -35,10 +35,6 @@ namespace SHSCC
             this.patientToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.viewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.patientToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.appointmentsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.updateToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.patientToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
-            this.appointmentsToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.dataToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.questionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.applicationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -60,7 +56,6 @@ namespace SHSCC
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.newToolStripMenuItem,
             this.viewToolStripMenuItem,
-            this.updateToolStripMenuItem,
             this.dataToolStripMenuItem,
             this.settingToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
@@ -88,8 +83,7 @@ namespace SHSCC
             // viewToolStripMenuItem
             // 
             this.viewToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.patientToolStripMenuItem1,
-            this.appointmentsToolStripMenuItem});
+            this.patientToolStripMenuItem1});
             this.viewToolStripMenuItem.ForeColor = System.Drawing.Color.DarkMagenta;
             this.viewToolStripMenuItem.Name = "viewToolStripMenuItem";
             this.viewToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
@@ -101,35 +95,6 @@ namespace SHSCC
             this.patientToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.patientToolStripMenuItem1.Text = "&Patient";
             this.patientToolStripMenuItem1.Click += new System.EventHandler(this.patientToolStripMenuItem1_Click);
-            // 
-            // appointmentsToolStripMenuItem
-            // 
-            this.appointmentsToolStripMenuItem.Name = "appointmentsToolStripMenuItem";
-            this.appointmentsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.appointmentsToolStripMenuItem.Text = "&Appointments";
-            // 
-            // updateToolStripMenuItem
-            // 
-            this.updateToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.patientToolStripMenuItem2,
-            this.appointmentsToolStripMenuItem1});
-            this.updateToolStripMenuItem.ForeColor = System.Drawing.Color.DarkMagenta;
-            this.updateToolStripMenuItem.Name = "updateToolStripMenuItem";
-            this.updateToolStripMenuItem.Size = new System.Drawing.Size(57, 20);
-            this.updateToolStripMenuItem.Text = "&Update";
-            // 
-            // patientToolStripMenuItem2
-            // 
-            this.patientToolStripMenuItem2.Name = "patientToolStripMenuItem2";
-            this.patientToolStripMenuItem2.Size = new System.Drawing.Size(150, 22);
-            this.patientToolStripMenuItem2.Text = "&Patient";
-            this.patientToolStripMenuItem2.Click += new System.EventHandler(this.patientToolStripMenuItem2_Click);
-            // 
-            // appointmentsToolStripMenuItem1
-            // 
-            this.appointmentsToolStripMenuItem1.Name = "appointmentsToolStripMenuItem1";
-            this.appointmentsToolStripMenuItem1.Size = new System.Drawing.Size(150, 22);
-            this.appointmentsToolStripMenuItem1.Text = "&Appointments";
             // 
             // dataToolStripMenuItem
             // 
@@ -146,25 +111,25 @@ namespace SHSCC
             // questionToolStripMenuItem
             // 
             this.questionToolStripMenuItem.Name = "questionToolStripMenuItem";
-            this.questionToolStripMenuItem.Size = new System.Drawing.Size(138, 22);
+            this.questionToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.questionToolStripMenuItem.Text = "&Question";
             // 
             // applicationToolStripMenuItem
             // 
             this.applicationToolStripMenuItem.Name = "applicationToolStripMenuItem";
-            this.applicationToolStripMenuItem.Size = new System.Drawing.Size(138, 22);
+            this.applicationToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.applicationToolStripMenuItem.Text = "&Application";
             // 
             // backupToolStripMenuItem
             // 
             this.backupToolStripMenuItem.Name = "backupToolStripMenuItem";
-            this.backupToolStripMenuItem.Size = new System.Drawing.Size(138, 22);
+            this.backupToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.backupToolStripMenuItem.Text = "&Backup";
             // 
             // synchronizeToolStripMenuItem
             // 
             this.synchronizeToolStripMenuItem.Name = "synchronizeToolStripMenuItem";
-            this.synchronizeToolStripMenuItem.Size = new System.Drawing.Size(138, 22);
+            this.synchronizeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.synchronizeToolStripMenuItem.Text = "&Synchronize";
             // 
             // settingToolStripMenuItem
@@ -182,25 +147,25 @@ namespace SHSCC
             // displayToolStripMenuItem
             // 
             this.displayToolStripMenuItem.Name = "displayToolStripMenuItem";
-            this.displayToolStripMenuItem.Size = new System.Drawing.Size(135, 22);
+            this.displayToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.displayToolStripMenuItem.Text = "&Display";
             // 
             // patientToolStripMenuItem3
             // 
             this.patientToolStripMenuItem3.Name = "patientToolStripMenuItem3";
-            this.patientToolStripMenuItem3.Size = new System.Drawing.Size(135, 22);
+            this.patientToolStripMenuItem3.Size = new System.Drawing.Size(180, 22);
             this.patientToolStripMenuItem3.Text = "&Patient";
             // 
             // accountToolStripMenuItem
             // 
             this.accountToolStripMenuItem.Name = "accountToolStripMenuItem";
-            this.accountToolStripMenuItem.Size = new System.Drawing.Size(135, 22);
+            this.accountToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.accountToolStripMenuItem.Text = "&Account";
             // 
             // applicationToolStripMenuItem1
             // 
             this.applicationToolStripMenuItem1.Name = "applicationToolStripMenuItem1";
-            this.applicationToolStripMenuItem1.Size = new System.Drawing.Size(135, 22);
+            this.applicationToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.applicationToolStripMenuItem1.Text = "&Application";
             // 
             // FrmSHSC
@@ -232,10 +197,6 @@ namespace SHSCC
         private System.Windows.Forms.ToolStripMenuItem patientToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem viewToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem patientToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem appointmentsToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem updateToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem patientToolStripMenuItem2;
-        private System.Windows.Forms.ToolStripMenuItem appointmentsToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem dataToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem questionToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem applicationToolStripMenuItem;

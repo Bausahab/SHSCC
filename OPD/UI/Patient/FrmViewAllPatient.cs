@@ -10,7 +10,8 @@ namespace SHSCC.OPD.UI.Patient
 {
     public partial class FrmViewAllPatient : Form
     {
-        List<PatientModel> patientModels = new List<PatientModel>();
+        public EventHandler<DataModels.PatientModel> PatientViewRequested;
+        //List<PatientModel> Data.LoadedDataFiles.AllPatients = new List<PatientModel>();
         public FrmViewAllPatient()
         {
             InitializeComponent();
@@ -35,7 +36,7 @@ namespace SHSCC.OPD.UI.Patient
 
         private void FrmViewAllPatient_Load(object sender, EventArgs e)
         {
-            patientModels = SHSCCTextDataOperationTasks.getPatientList();
+            Data.LoadedDataFiles.AllPatients = SHSCCTextDataOperationTasks.getPatientList();
 
             StyleDataGridView();
             setdatatoTable(patientModels);
@@ -69,7 +70,23 @@ namespace SHSCC.OPD.UI.Patient
 
         private void kryptonButton11_Click(object sender, EventArgs e)
         {
-            this.Close();
+           // this.Close();
+        }
+
+        private void FrmViewAllPatient_Activated(object sender, EventArgs e)
+        {
+            Data.LoadedDataFiles.AllPatients = SHSCCTextDataOperationTasks.getPatientList();
+
+            StyleDataGridView();
+
+            foreach (var patient in Data.LoadedDataFiles.AllPatients.Select((value, i) => new { i, value }))
+            {
+                var ap = patient.value;
+                dataGridView1.Rows.Add(patient.i + 1,
+                     ap.RegNo
+                    , ap.Name, ap.ContactNo, ap.Adhar, ap.Gender, ap.Age);
+
+            }
         }
 
         private void label3_Click(object sender, EventArgs e)
