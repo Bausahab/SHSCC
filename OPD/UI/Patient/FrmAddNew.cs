@@ -27,6 +27,7 @@ namespace SHSCC.OPD.UI.Patient
         }
         public FrmAddNew(PatientModel patemodel) : this()
         {
+            dateTimePicker1.Value = DateTime.Now;
             if (patemodel != null)
             {
 
@@ -131,7 +132,7 @@ namespace SHSCC.OPD.UI.Patient
 
                     appont = new Appointments();
                     appont.AppointmentDate = dateTimePicker1.Value;
-                    appont.AppointmentNext = dateTimePicker1.Value.AddDays(10);
+                  //  appont.AppointmentNext = dateTimePicker1.Value.AddDays(10);
 
                     patentoadd.AppointmentsForPatient.Add(appont);
 
@@ -394,14 +395,14 @@ namespace SHSCC.OPD.UI.Patient
 
         private void kryptonButton10_Click(object sender, EventArgs e)
         {
-            kryptonListBox1.Items.AddRange(SHSCCTextDataOperationTasks.GetAllFiles(Path.Combine(Properties.Settings.Default.DefaultDir, "SHSCCDataBase\\Patient")));
+          //  kryptonListBox1.Items.AddRange(SHSCCTextDataOperationTasks.GetAllFiles(Path.Combine(Properties.Settings.Default.DefaultDir, "SHSCCDataBase\\Patient")));
 
         }
 
         private void kryptonListBox1_SelectedValueChanged(object sender, EventArgs e)
         {
-            string kk = kryptonListBox1.SelectedItem.ToString();
-            kryptonRichTextBox1.Text = SHSCCTextDataOperationTasks.ReadPatient(kk);
+            //string kk = kryptonListBox1.SelectedItem.ToString();
+            //kryptonRichTextBox1.Text = SHSCCTextDataOperationTasks.ReadPatient(kk);
         }
 
         private void tabPage2_Enter(object sender, EventArgs e)
@@ -411,6 +412,7 @@ namespace SHSCC.OPD.UI.Patient
 
         private void kryptonButton3_Click(object sender, EventArgs e)
         {
+            appont.AppointmentNext = dateTimePicker2.Value;
             appont.MedicineName = textBox1.Text;
             appont.MedicinePotential = textBox2.Text;
             addPriceptionData();
@@ -558,7 +560,7 @@ namespace SHSCC.OPD.UI.Patient
 
             NEWPATIENT = false;
             btnDelRec.Visible = true;
-            btnSave.Visible = false;
+           // btnSave.Visible = false;
             //patentoadd
             patentoadd = patientModel;
             tbregno.Text = patientModel.RegNo;
@@ -672,7 +674,7 @@ namespace SHSCC.OPD.UI.Patient
 
         public void addPriceptionData()
         {
-            dateTimePicker2.Value = appont.AppointmentNext;
+            //dateTimePicker2.Value = appont.AppointmentNext;
             textBox1.Text = appont.MedicineName;
             textBox2.Text = appont.MedicinePotential;
             dataGridView1.Rows.Clear();
@@ -786,6 +788,11 @@ namespace SHSCC.OPD.UI.Patient
                 }
                 this.Dispose();
             
+        }
+
+        private void dateTimePicker2_ValueChanged(object sender, EventArgs e)
+        {
+
         }
     }
 

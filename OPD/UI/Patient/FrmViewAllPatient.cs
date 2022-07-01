@@ -57,8 +57,12 @@ namespace SHSCC.OPD.UI.Patient
 
 
                     FrmAddNew frmAdd = new FrmAddNew(ok);
+                    //frmAdd.MdiParent = this;
+                    //frmAdd.WindowState = FormWindowState.Maximized;
                     frmAdd.Show();
                     this.Dispose();
+                  
+
                 }
                 catch (Exception)
                 {
@@ -70,7 +74,7 @@ namespace SHSCC.OPD.UI.Patient
 
         private void kryptonButton11_Click(object sender, EventArgs e)
         {
-           // this.Close();
+            this.Close();
         }
 
         private void FrmViewAllPatient_Activated(object sender, EventArgs e)
@@ -78,15 +82,7 @@ namespace SHSCC.OPD.UI.Patient
             Data.LoadedDataFiles.AllPatients = SHSCCTextDataOperationTasks.getPatientList();
 
             StyleDataGridView();
-
-            foreach (var patient in Data.LoadedDataFiles.AllPatients.Select((value, i) => new { i, value }))
-            {
-                var ap = patient.value;
-                dataGridView1.Rows.Add(patient.i + 1,
-                     ap.RegNo
-                    , ap.Name, ap.ContactNo, ap.Adhar, ap.Gender, ap.Age);
-
-            }
+            setdatatoTable(Data.LoadedDataFiles.AllPatients);
         }
 
         private void label3_Click(object sender, EventArgs e)
@@ -142,7 +138,7 @@ namespace SHSCC.OPD.UI.Patient
                 try
                 {
 
-                    int regno = Convert.ToInt32(ap.RegNo);
+                    int regno = Convert.ToInt32(ap.RegNo.Trim());
 
                     dataGridView1.Rows.Add(patient.i + 1,
                       regno
