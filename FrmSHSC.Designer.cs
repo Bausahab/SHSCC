@@ -31,10 +31,6 @@ namespace SHSCC
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmSHSC));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.newToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.patientToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.viewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.patientToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.dataToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.questionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.applicationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -45,6 +41,9 @@ namespace SHSCC
             this.patientToolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
             this.accountToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.applicationToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.pATIENTToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.nEWToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.vIEWALLToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -54,8 +53,7 @@ namespace SHSCC
             this.menuStrip1.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.newToolStripMenuItem,
-            this.viewToolStripMenuItem,
+            this.pATIENTToolStripMenuItem2,
             this.dataToolStripMenuItem,
             this.settingToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
@@ -63,38 +61,6 @@ namespace SHSCC
             this.menuStrip1.Size = new System.Drawing.Size(882, 24);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
-            // 
-            // newToolStripMenuItem
-            // 
-            this.newToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.patientToolStripMenuItem});
-            this.newToolStripMenuItem.ForeColor = System.Drawing.Color.DarkMagenta;
-            this.newToolStripMenuItem.Name = "newToolStripMenuItem";
-            this.newToolStripMenuItem.Size = new System.Drawing.Size(43, 20);
-            this.newToolStripMenuItem.Text = "&New";
-            // 
-            // patientToolStripMenuItem
-            // 
-            this.patientToolStripMenuItem.Name = "patientToolStripMenuItem";
-            this.patientToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.patientToolStripMenuItem.Text = "&Patient";
-            this.patientToolStripMenuItem.Click += new System.EventHandler(this.patientToolStripMenuItem_Click);
-            // 
-            // viewToolStripMenuItem
-            // 
-            this.viewToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.patientToolStripMenuItem1});
-            this.viewToolStripMenuItem.ForeColor = System.Drawing.Color.DarkMagenta;
-            this.viewToolStripMenuItem.Name = "viewToolStripMenuItem";
-            this.viewToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
-            this.viewToolStripMenuItem.Text = "&View";
-            // 
-            // patientToolStripMenuItem1
-            // 
-            this.patientToolStripMenuItem1.Name = "patientToolStripMenuItem1";
-            this.patientToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
-            this.patientToolStripMenuItem1.Text = "&Patient";
-            this.patientToolStripMenuItem1.Click += new System.EventHandler(this.patientToolStripMenuItem1_Click);
             // 
             // dataToolStripMenuItem
             // 
@@ -168,6 +134,29 @@ namespace SHSCC
             this.applicationToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.applicationToolStripMenuItem1.Text = "&Application";
             // 
+            // pATIENTToolStripMenuItem2
+            // 
+            this.pATIENTToolStripMenuItem2.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.nEWToolStripMenuItem1,
+            this.vIEWALLToolStripMenuItem});
+            this.pATIENTToolStripMenuItem2.Name = "pATIENTToolStripMenuItem2";
+            this.pATIENTToolStripMenuItem2.Size = new System.Drawing.Size(62, 20);
+            this.pATIENTToolStripMenuItem2.Text = "&PATIENT";
+            // 
+            // nEWToolStripMenuItem1
+            // 
+            this.nEWToolStripMenuItem1.Name = "nEWToolStripMenuItem1";
+            this.nEWToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.nEWToolStripMenuItem1.Text = "&NEW";
+            this.nEWToolStripMenuItem1.Click += new System.EventHandler(this.nEWToolStripMenuItem1_Click);
+            // 
+            // vIEWALLToolStripMenuItem
+            // 
+            this.vIEWALLToolStripMenuItem.Name = "vIEWALLToolStripMenuItem";
+            this.vIEWALLToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.vIEWALLToolStripMenuItem.Text = "&VIEW ALL";
+            this.vIEWALLToolStripMenuItem.Click += new System.EventHandler(this.vIEWALLToolStripMenuItem_Click);
+            // 
             // FrmSHSC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -193,10 +182,6 @@ namespace SHSCC
         #endregion
 
         private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem newToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem patientToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem viewToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem patientToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem dataToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem questionToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem applicationToolStripMenuItem;
@@ -207,6 +192,9 @@ namespace SHSCC
         private System.Windows.Forms.ToolStripMenuItem patientToolStripMenuItem3;
         private System.Windows.Forms.ToolStripMenuItem accountToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem applicationToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem pATIENTToolStripMenuItem2;
+        private System.Windows.Forms.ToolStripMenuItem nEWToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem vIEWALLToolStripMenuItem;
     }
 }
 

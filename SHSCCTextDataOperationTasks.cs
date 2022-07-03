@@ -1,7 +1,9 @@
 ﻿using Newtonsoft.Json;
 using SHSCC.DataModels;
+using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using System.Threading.Tasks;
 
 namespace SHSCC
@@ -9,10 +11,10 @@ namespace SHSCC
     public static class SHSCCTextDataOperationTasks
     {
         public static string OperationDate { get; private set; }
+        static readonly string WorkingDirectory = (Path.Combine(Properties.Settings.Default.DefaultDir, "SHSCCDataBase\\Patient\\"));
 
-      
 
-       public static async Task<bool> DriveExist()
+        public static async Task<bool> DriveExist()
         {
             return await Task.FromResult(Directory.Exists(Properties.Settings.Default.DefaultDir));
         }
@@ -70,24 +72,44 @@ namespace SHSCC
  
         public static string[] GetAllFiles(string DirName)
         {
+            //DirectoryInfo dirInfo = new DirectoryInfo(DirName);
+            //FileSystemInfo[] allFiles = dirInfo.GetFileSystemInfos();
+            //var orderedFiles = allFiles.OrderBy(f => f.Name);
+
+            //string files = Directory.EnumerateFiles(DirName);//.OrderByDescending(filename => filename).ToList();
+
             string[] fileArray = Directory.GetFiles(DirName, "*.json");
+            Array.Sort(fileArray);
             return fileArray;
+            //  return new string[8];
+
         }
 
         public static List<PatientModel> getPatientList()
         {
-            List<PatientModel> patientList = new List<PatientModel>();
-    
-            string[] fileArray = GetAllFiles(Path.Combine(Properties.Settings.Default.DefaultDir, "SHSCCDataBase\\Patient\\"));
 
-         
+            List<PatientModel> patientList = new List<PatientModel>();
+            //DirectoryInfo place = new DirectoryInfo(Path.Combine(Properties.Settings.Default.DefaultDir, "SHSCCDataBase\\Patient\\"));
+            //FileInfo[] Files = place.GetFiles();
+            //foreach (FileInfo i in Files)
+            //{
+            //    string patientstr = ReadPatient(i.Name);
+            //    if (patientstr != null)
+            //    {
+            //        patientList.Add(JsonConvert.DeserializeObject<PatientModel>(patientstr));
+            //    }
+
+            //}
+          //  string[] fileArray = GetAllFiles(Path.Combine(Properties.Settings.Default.DefaultDir, "SHSCCDataBase\\Patient\\"));
+            var fileArray = Directory.GetFiles(Path.Combine(Properties.Settings.Default.DefaultDir, "SHSCCDataBase\\Patient\\")).OrderBy(f => int.Parse(Path.GetFileNameWithoutExtension(f)));
+
             foreach (string filename in fileArray)
             {
-             //  string filename1 =  Path.Combine(Properties.Settings.Default.DefaultDir, "SHSCCDataBase\\Patient\\" + filename );
-                string patientstr =  ReadPatient(filename);
+                //  string filename1 =  Path.Combine(Properties.Settings.Default.DefaultDir, "SHSCCDataBase\\Patient\\" + filename );
+                string patientstr = ReadPatient(filename);
                 if (patientstr != null)
                 {
-                    patientList.Add( JsonConvert.DeserializeObject<PatientModel>(patientstr));
+                    patientList.Add(JsonConvert.DeserializeObject<PatientModel>(patientstr));
                 }
 
             }

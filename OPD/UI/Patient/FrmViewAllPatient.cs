@@ -1,6 +1,7 @@
 ﻿using SHSCC.DataModels;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
@@ -10,15 +11,14 @@ namespace SHSCC.OPD.UI.Patient
 {
     public partial class FrmViewAllPatient : Form
     {
-        public EventHandler<DataModels.PatientModel> PatientViewRequested;
+        public EventHandler<int> PatientViewRequested;
+      //  public EventHandler<PatientModel> 
         //List<PatientModel> Data.LoadedDataFiles.AllPatients = new List<PatientModel>();
         public FrmViewAllPatient()
         {
             InitializeComponent();
             StyleDataGridView();
         }
-
-
 
         public void StyleDataGridView()
         {
@@ -30,7 +30,6 @@ namespace SHSCC.OPD.UI.Patient
             dataGridView1.DefaultCellStyle.SelectionForeColor = Color.WhiteSmoke;
             //  dataGridView1.BackgroundColor = Color.FromArgb(174, 182, 191);
             // dataGridView1.EnableHeadersVisualStyles = false;
-
             dataGridView1.Columns[2].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
         }
 
@@ -40,7 +39,8 @@ namespace SHSCC.OPD.UI.Patient
 
             StyleDataGridView();
             setdatatoTable(Data.LoadedDataFiles.AllPatients);
-
+          //  this.dataGridView1.Sort(this.dataGridView1.Columns["reg_no"], ListSortDirection.Descending);
+           
 
 
 
@@ -53,16 +53,13 @@ namespace SHSCC.OPD.UI.Patient
             {
                 try
                 {
-                    var ok = Data.LoadedDataFiles.AllPatients[e.RowIndex];
-
-
-                    FrmAddNew frmAdd = new FrmAddNew(ok);
-                    //frmAdd.MdiParent = this;
-                    //frmAdd.WindowState = FormWindowState.Maximized;
-                    frmAdd.Show();
+                   
+                    PatientViewRequested?.Invoke(this,e.RowIndex+1);
+                    //FrmAddNew frmAdd = new FrmAddNew(ok);
+                    ////frmAdd.MdiParent = this;
+                    ////frmAdd.WindowState = FormWindowState.Maximized;
+                    //frmAdd.Show();
                     this.Dispose();
-                  
-
                 }
                 catch (Exception)
                 {
@@ -140,14 +137,14 @@ namespace SHSCC.OPD.UI.Patient
 
                     int regno = Convert.ToInt32(ap.RegNo.Trim());
 
-                    dataGridView1.Rows.Add(patient.i + 1,
+                    dataGridView1.Rows.Add(
                       regno
                       , ap.Name, ap.ContactNo, ap.Adhar, ap.Gender, ap.Age);
                 }
                 catch (Exception)
                 {
 
-                    dataGridView1.Rows.Add(patient.i + 1,
+                    dataGridView1.Rows.Add(
                          ap.RegNo
                         , ap.Name, ap.ContactNo, ap.Adhar, ap.Gender, ap.Age);
 

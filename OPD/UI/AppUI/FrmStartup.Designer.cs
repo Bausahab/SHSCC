@@ -31,15 +31,15 @@ namespace SHSCC.OPD.UI.AppUI
         {
             this.components = new System.ComponentModel.Container();
             this.kryptonGroupBox1 = new ComponentFactory.Krypton.Toolkit.KryptonGroupBox();
+            this.kryptonWrapLabel3 = new ComponentFactory.Krypton.Toolkit.KryptonWrapLabel();
+            this.lblSeltedDriveinfo = new ComponentFactory.Krypton.Toolkit.KryptonWrapLabel();
+            this.kryptonComboBox1 = new ComponentFactory.Krypton.Toolkit.KryptonComboBox();
             this.kryptonButton1 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.lblDateTime = new ComponentFactory.Krypton.Toolkit.KryptonWrapLabel();
             this.kryptonWrapLabel2 = new ComponentFactory.Krypton.Toolkit.KryptonWrapLabel();
             this.btnStart = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.kryptonWrapLabel1 = new ComponentFactory.Krypton.Toolkit.KryptonWrapLabel();
             this.kryptonManager1 = new ComponentFactory.Krypton.Toolkit.KryptonManager(this.components);
-            this.kryptonComboBox1 = new ComponentFactory.Krypton.Toolkit.KryptonComboBox();
-            this.lblSeltedDriveinfo = new ComponentFactory.Krypton.Toolkit.KryptonWrapLabel();
-            this.kryptonWrapLabel3 = new ComponentFactory.Krypton.Toolkit.KryptonWrapLabel();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox1.Panel)).BeginInit();
             this.kryptonGroupBox1.Panel.SuspendLayout();
@@ -68,6 +68,40 @@ namespace SHSCC.OPD.UI.AppUI
             this.kryptonGroupBox1.TabIndex = 0;
             this.kryptonGroupBox1.Values.Description = "SHSC";
             this.kryptonGroupBox1.Values.Heading = "SAURABH HOMIO SKIN CARE";
+            // 
+            // kryptonWrapLabel3
+            // 
+            this.kryptonWrapLabel3.Font = new System.Drawing.Font("Segoe UI", 13.5F, System.Drawing.FontStyle.Bold);
+            this.kryptonWrapLabel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(59)))), ((int)(((byte)(59)))));
+            this.kryptonWrapLabel3.LabelStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.TitleControl;
+            this.kryptonWrapLabel3.Location = new System.Drawing.Point(134, 233);
+            this.kryptonWrapLabel3.Name = "kryptonWrapLabel3";
+            this.kryptonWrapLabel3.Size = new System.Drawing.Size(81, 25);
+            this.kryptonWrapLabel3.Text = "Change:";
+            // 
+            // lblSeltedDriveinfo
+            // 
+            this.lblSeltedDriveinfo.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lblSeltedDriveinfo.Font = new System.Drawing.Font("Segoe UI", 13.5F, System.Drawing.FontStyle.Bold);
+            this.lblSeltedDriveinfo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(59)))), ((int)(((byte)(59)))));
+            this.lblSeltedDriveinfo.LabelStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.TitleControl;
+            this.lblSeltedDriveinfo.Location = new System.Drawing.Point(243, 202);
+            this.lblSeltedDriveinfo.Name = "lblSeltedDriveinfo";
+            this.lblSeltedDriveinfo.Size = new System.Drawing.Size(189, 25);
+            this.lblSeltedDriveinfo.Text = "SELECT DATA DRIVE:";
+            // 
+            // kryptonComboBox1
+            // 
+            this.kryptonComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.kryptonComboBox1.DropDownWidth = 237;
+            this.kryptonComboBox1.InputControlStyle = ComponentFactory.Krypton.Toolkit.InputControlStyle.Ribbon;
+            this.kryptonComboBox1.Location = new System.Drawing.Point(221, 233);
+            this.kryptonComboBox1.Name = "kryptonComboBox1";
+            this.kryptonComboBox1.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Office2007Blue;
+            this.kryptonComboBox1.Size = new System.Drawing.Size(237, 21);
+            this.kryptonComboBox1.TabIndex = 14;
+            this.kryptonComboBox1.DropDown += new System.EventHandler(this.kryptonComboBox1_DropDown);
+            this.kryptonComboBox1.SelectionChangeCommitted += new System.EventHandler(this.kryptonComboBox1_SelectionChangeCommitted);
             // 
             // kryptonButton1
             // 
@@ -121,39 +155,6 @@ namespace SHSCC.OPD.UI.AppUI
             // kryptonManager1
             // 
             this.kryptonManager1.GlobalPaletteMode = ComponentFactory.Krypton.Toolkit.PaletteModeManager.Office2010Silver;
-            // 
-            // kryptonComboBox1
-            // 
-            this.kryptonComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.kryptonComboBox1.DropDownWidth = 237;
-            this.kryptonComboBox1.InputControlStyle = ComponentFactory.Krypton.Toolkit.InputControlStyle.Ribbon;
-            this.kryptonComboBox1.Location = new System.Drawing.Point(221, 233);
-            this.kryptonComboBox1.Name = "kryptonComboBox1";
-            this.kryptonComboBox1.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Office2007Blue;
-            this.kryptonComboBox1.Size = new System.Drawing.Size(237, 21);
-            this.kryptonComboBox1.TabIndex = 14;
-            this.kryptonComboBox1.DropDown += new System.EventHandler(this.kryptonComboBox1_DropDown);
-            this.kryptonComboBox1.SelectionChangeCommitted += new System.EventHandler(this.kryptonComboBox1_SelectionChangeCommitted);
-            // 
-            // lblSeltedDriveinfo
-            // 
-            this.lblSeltedDriveinfo.Font = new System.Drawing.Font("Segoe UI", 13.5F, System.Drawing.FontStyle.Bold);
-            this.lblSeltedDriveinfo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(59)))), ((int)(((byte)(59)))));
-            this.lblSeltedDriveinfo.LabelStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.TitleControl;
-            this.lblSeltedDriveinfo.Location = new System.Drawing.Point(221, 205);
-            this.lblSeltedDriveinfo.Name = "lblSeltedDriveinfo";
-            this.lblSeltedDriveinfo.Size = new System.Drawing.Size(189, 25);
-            this.lblSeltedDriveinfo.Text = "SELECT DATA DRIVE:";
-            // 
-            // kryptonWrapLabel3
-            // 
-            this.kryptonWrapLabel3.Font = new System.Drawing.Font("Segoe UI", 13.5F, System.Drawing.FontStyle.Bold);
-            this.kryptonWrapLabel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(59)))), ((int)(((byte)(59)))));
-            this.kryptonWrapLabel3.LabelStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.TitleControl;
-            this.kryptonWrapLabel3.Location = new System.Drawing.Point(134, 233);
-            this.kryptonWrapLabel3.Name = "kryptonWrapLabel3";
-            this.kryptonWrapLabel3.Size = new System.Drawing.Size(81, 25);
-            this.kryptonWrapLabel3.Text = "Change:";
             // 
             // FrmStartup
             // 

@@ -652,8 +652,6 @@ namespace SHSCC.OPD.UI.Patient
 
         }
 
-
-
         public void addMobilityData()
         {
 
@@ -670,7 +668,6 @@ namespace SHSCC.OPD.UI.Patient
 
             }
         }
-
 
         public void addPriceptionData()
         {
@@ -690,7 +687,6 @@ namespace SHSCC.OPD.UI.Patient
             StyleDataGridView();
         }
 
-
         public void StyleDataGridView()
         {
             dataGridView1.BorderStyle = BorderStyle.None;
@@ -703,8 +699,6 @@ namespace SHSCC.OPD.UI.Patient
 
             dataGridView1.Columns[3].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
         }
-
-
 
         private void changeAppointmentView(object sender, int e)
         {
@@ -738,7 +732,6 @@ namespace SHSCC.OPD.UI.Patient
             tabPage2.Invalidate();
         }
 
-
         public void enableTabs()
         {
             tabControl1.Enabled = true;
@@ -760,6 +753,8 @@ namespace SHSCC.OPD.UI.Patient
         {
             listBoxAggra.Items.RemoveAt(listBoxAggra.SelectedIndex);
         }
+
+        public EventHandler WindowClosed;
 
         private void kryptonButton11_Click(object sender, EventArgs e)
         {
