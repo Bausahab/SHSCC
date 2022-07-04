@@ -758,6 +758,7 @@ namespace SHSCC.OPD.UI.Patient
 
         private void kryptonButton11_Click(object sender, EventArgs e)
         {
+            //   System.Diagnostics.Process.Start("explorer.exe", Path.Combine(Properties.Settings.Default.DefaultDir, "SHSCCDataBase\\Patient\\"));
             this.Close();
         }
 

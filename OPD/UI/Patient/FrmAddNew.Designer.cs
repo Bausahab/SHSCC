@@ -30,10 +30,10 @@ namespace SHSCC.OPD.UI.Patient
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmAddNew));
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnDelRec = new ComponentFactory.Krypton.Toolkit.KryptonButton();
@@ -41,7 +41,6 @@ namespace SHSCC.OPD.UI.Patient
             this.btnSave = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.tbname = new System.Windows.Forms.TextBox();
-            this.tbregno = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -167,6 +166,7 @@ namespace SHSCC.OPD.UI.Patient
             this.label4 = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.kryptonRichTextBox1 = new ComponentFactory.Krypton.Toolkit.KryptonRichTextBox();
+            this.tbregno = new System.Windows.Forms.NumericUpDown();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
@@ -202,17 +202,18 @@ namespace SHSCC.OPD.UI.Patient
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownAge)).BeginInit();
             this.tabControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tbregno)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Honeydew;
+            this.panel1.Controls.Add(this.tbregno);
             this.panel1.Controls.Add(this.btnDelRec);
             this.panel1.Controls.Add(this.kryptonButton11);
             this.panel1.Controls.Add(this.btnSave);
             this.panel1.Controls.Add(this.dateTimePicker1);
             this.panel1.Controls.Add(this.tbname);
-            this.panel1.Controls.Add(this.tbregno);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label3);
@@ -399,18 +400,6 @@ namespace SHSCC.OPD.UI.Patient
             this.tbname.Size = new System.Drawing.Size(264, 37);
             this.tbname.TabIndex = 1;
             // 
-            // tbregno
-            // 
-            this.tbregno.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.tbregno.Font = new System.Drawing.Font("Book Antiqua", 14F);
-            this.tbregno.Location = new System.Drawing.Point(21, 57);
-            this.tbregno.Multiline = true;
-            this.tbregno.Name = "tbregno";
-            this.tbregno.Size = new System.Drawing.Size(182, 37);
-            this.tbregno.TabIndex = 0;
-            this.tbregno.TextChanged += new System.EventHandler(this.tbregno_TextChanged);
-            this.tbregno.Leave += new System.EventHandler(this.tbregno_Leave);
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -550,7 +539,7 @@ namespace SHSCC.OPD.UI.Patient
             this.tabPage5.Controls.Add(this.tableLayoutPanel8);
             this.tabPage5.Location = new System.Drawing.Point(4, 33);
             this.tabPage5.Name = "tabPage5";
-            this.tabPage5.Padding = new System.Windows.Forms.Padding(8, 8, 8, 8);
+            this.tabPage5.Padding = new System.Windows.Forms.Padding(8);
             this.tabPage5.Size = new System.Drawing.Size(1209, 444);
             this.tabPage5.TabIndex = 5;
             this.tabPage5.Text = "Desease Details";
@@ -588,7 +577,7 @@ namespace SHSCC.OPD.UI.Patient
             // 
             this.flowLayoutPanel2.Font = new System.Drawing.Font("Bookman Old Style", 12F);
             this.flowLayoutPanel2.Location = new System.Drawing.Point(2, 2);
-            this.flowLayoutPanel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.flowLayoutPanel2.Margin = new System.Windows.Forms.Padding(2);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
             this.flowLayoutPanel2.Padding = new System.Windows.Forms.Padding(4, 0, 4, 4);
             this.flowLayoutPanel2.Size = new System.Drawing.Size(972, 40);
@@ -606,7 +595,7 @@ namespace SHSCC.OPD.UI.Patient
             this.tableLayoutPanel5.Controls.Add(this.tableLayoutPanel6, 0, 0);
             this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel5.Location = new System.Drawing.Point(2, 76);
-            this.tableLayoutPanel5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tableLayoutPanel5.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel5.Name = "tableLayoutPanel5";
             this.tableLayoutPanel5.Padding = new System.Windows.Forms.Padding(9, 5, 9, 20);
             this.tableLayoutPanel5.RowCount = 1;
@@ -624,7 +613,7 @@ namespace SHSCC.OPD.UI.Patient
             this.tableLayoutPanel7.Controls.Add(this.pictureBox3, 0, 1);
             this.tableLayoutPanel7.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel7.Location = new System.Drawing.Point(608, 10);
-            this.tableLayoutPanel7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tableLayoutPanel7.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel7.Name = "tableLayoutPanel7";
             this.tableLayoutPanel7.RowCount = 4;
             this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 49F));
@@ -656,7 +645,7 @@ namespace SHSCC.OPD.UI.Patient
             this.panel5.Controls.Add(this.kryptonButton9);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel5.Location = new System.Drawing.Point(2, 171);
-            this.panel5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel5.Margin = new System.Windows.Forms.Padding(2);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(563, 77);
             this.panel5.TabIndex = 64;
@@ -859,7 +848,7 @@ namespace SHSCC.OPD.UI.Patient
             this.tableLayoutPanel6.Controls.Add(this.pictureBox2, 0, 1);
             this.tableLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel6.Location = new System.Drawing.Point(14, 10);
-            this.tableLayoutPanel6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tableLayoutPanel6.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel6.Name = "tableLayoutPanel6";
             this.tableLayoutPanel6.RowCount = 4;
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 49F));
@@ -892,7 +881,7 @@ namespace SHSCC.OPD.UI.Patient
             this.panel4.Controls.Add(this.kryptonButton5);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel4.Location = new System.Drawing.Point(2, 171);
-            this.panel4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel4.Margin = new System.Windows.Forms.Padding(2);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(562, 77);
             this.panel4.TabIndex = 64;
@@ -1091,7 +1080,7 @@ namespace SHSCC.OPD.UI.Patient
             this.tabPage2.Controls.Add(this.tableLayoutPanel4);
             this.tabPage2.Location = new System.Drawing.Point(4, 33);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage2.Size = new System.Drawing.Size(1209, 444);
             this.tabPage2.TabIndex = 4;
             this.tabPage2.Text = "Prescription";
@@ -1106,9 +1095,9 @@ namespace SHSCC.OPD.UI.Patient
             this.tableLayoutPanel4.Controls.Add(this.dataGridView1, 1, 0);
             this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel4.Location = new System.Drawing.Point(3, 3);
-            this.tableLayoutPanel4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tableLayoutPanel4.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
-            this.tableLayoutPanel4.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableLayoutPanel4.Padding = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel4.RowCount = 1;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel4.Size = new System.Drawing.Size(1203, 438);
@@ -1128,7 +1117,7 @@ namespace SHSCC.OPD.UI.Patient
             this.panel3.Controls.Add(this.label31);
             this.panel3.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel3.Location = new System.Drawing.Point(12, 19);
-            this.panel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel3.Margin = new System.Windows.Forms.Padding(2);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(315, 400);
             this.panel3.TabIndex = 1;
@@ -1265,14 +1254,14 @@ namespace SHSCC.OPD.UI.Patient
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(182)))), ((int)(((byte)(191)))));
             this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Red;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Red;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Bookman Old Style", 13F);
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Red;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.Red;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Sr_no,
@@ -1280,23 +1269,23 @@ namespace SHSCC.OPD.UI.Patient
             this.nextApp,
             this.medicineName,
             this.medicinePoten});
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Bookman Old Style", 13F);
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle4.Padding = new System.Windows.Forms.Padding(4);
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle4;
-            this.dataGridView1.Location = new System.Drawing.Point(352, 20);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(16, 16, 16, 16);
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
+            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Bookman Old Style", 13F);
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle8.Padding = new System.Windows.Forms.Padding(4);
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle8;
+            this.dataGridView1.Location = new System.Drawing.Point(351, 20);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(16);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 40;
             this.dataGridView1.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.Size = new System.Drawing.Size(831, 398);
+            this.dataGridView1.Size = new System.Drawing.Size(832, 398);
             this.dataGridView1.TabIndex = 2;
             // 
             // Sr_no
@@ -1322,8 +1311,8 @@ namespace SHSCC.OPD.UI.Patient
             // 
             // medicineName
             // 
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.medicineName.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.medicineName.DefaultCellStyle = dataGridViewCellStyle6;
             this.medicineName.HeaderText = "Medicine Name";
             this.medicineName.MinimumWidth = 150;
             this.medicineName.Name = "medicineName";
@@ -1331,8 +1320,8 @@ namespace SHSCC.OPD.UI.Patient
             // 
             // medicinePoten
             // 
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.medicinePoten.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.medicinePoten.DefaultCellStyle = dataGridViewCellStyle7;
             this.medicinePoten.HeaderText = "Medicine Potential";
             this.medicinePoten.MinimumWidth = 150;
             this.medicinePoten.Name = "medicinePoten";
@@ -1343,7 +1332,7 @@ namespace SHSCC.OPD.UI.Patient
             this.tabPage4.Controls.Add(this.splitContainer1);
             this.tabPage4.Location = new System.Drawing.Point(4, 33);
             this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage4.Size = new System.Drawing.Size(1209, 444);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Modalities";
@@ -1380,7 +1369,7 @@ namespace SHSCC.OPD.UI.Patient
             this.tableLayoutPanel3.Controls.Add(this.btnSubmit, 0, 2);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel3.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 3;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 49F));
@@ -1481,7 +1470,6 @@ namespace SHSCC.OPD.UI.Patient
             // 
             // toolStripTextBox1
             // 
-            this.toolStripTextBox1.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.toolStripTextBox1.Name = "toolStripTextBox1";
             this.toolStripTextBox1.Size = new System.Drawing.Size(200, 23);
             // 
@@ -1569,7 +1557,7 @@ namespace SHSCC.OPD.UI.Patient
             // 
             this.splitContainer2.Panel1.BackColor = System.Drawing.Color.Honeydew;
             this.splitContainer2.Panel1.Controls.Add(this.tableLayoutPanel2);
-            this.splitContainer2.Panel1.Margin = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.splitContainer2.Panel1.Margin = new System.Windows.Forms.Padding(3);
             // 
             // splitContainer2.Panel2
             // 
@@ -1588,7 +1576,7 @@ namespace SHSCC.OPD.UI.Patient
             this.tableLayoutPanel2.Controls.Add(this.label19, 0, 0);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel2.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 3;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 49F));
@@ -1646,7 +1634,7 @@ namespace SHSCC.OPD.UI.Patient
             this.tableLayoutPanel1.Controls.Add(this.button4, 0, 2);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 3;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 49F));
@@ -1726,7 +1714,7 @@ namespace SHSCC.OPD.UI.Patient
             this.tabPage3.Controls.Add(this.Cbpain);
             this.tabPage3.Location = new System.Drawing.Point(4, 33);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage3.Size = new System.Drawing.Size(1209, 444);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Diagonstics Details";
@@ -1849,7 +1837,7 @@ namespace SHSCC.OPD.UI.Patient
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.flowLayoutPanel1.Font = new System.Drawing.Font("Bookman Old Style", 12F);
             this.flowLayoutPanel1.Location = new System.Drawing.Point(3, 3);
-            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(2);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Padding = new System.Windows.Forms.Padding(4, 0, 4, 4);
             this.flowLayoutPanel1.Size = new System.Drawing.Size(1203, 40);
@@ -2227,7 +2215,7 @@ namespace SHSCC.OPD.UI.Patient
             this.tabPage1.Controls.Add(this.label4);
             this.tabPage1.Location = new System.Drawing.Point(4, 33);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage1.Size = new System.Drawing.Size(1209, 444);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Registration Details";
@@ -2530,6 +2518,19 @@ namespace SHSCC.OPD.UI.Patient
             this.kryptonRichTextBox1.TabIndex = 193;
             this.kryptonRichTextBox1.Text = "kryptonRichTextBox1";
             // 
+            // tbregno
+            // 
+            this.tbregno.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbregno.Location = new System.Drawing.Point(21, 57);
+            this.tbregno.Maximum = new decimal(new int[] {
+            100000,
+            0,
+            0,
+            0});
+            this.tbregno.Name = "tbregno";
+            this.tbregno.Size = new System.Drawing.Size(128, 29);
+            this.tbregno.TabIndex = 32;
+            // 
             // FrmAddNew
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2597,6 +2598,7 @@ namespace SHSCC.OPD.UI.Patient
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownAge)).EndInit();
             this.tabControl1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.tbregno)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -2612,7 +2614,6 @@ namespace SHSCC.OPD.UI.Patient
         private ComponentFactory.Krypton.Toolkit.KryptonButton btnSave;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.TextBox tbname;
-        private System.Windows.Forms.TextBox tbregno;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
@@ -2734,5 +2735,6 @@ namespace SHSCC.OPD.UI.Patient
         private System.Windows.Forms.PictureBox pictureBox2;
         private ComponentFactory.Krypton.Toolkit.KryptonButton btnDelRec;
         private ComponentFactory.Krypton.Toolkit.KryptonRichTextBox kryptonRichTextBox1;
+        private System.Windows.Forms.NumericUpDown tbregno;
     }
 }

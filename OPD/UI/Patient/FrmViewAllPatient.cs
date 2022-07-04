@@ -53,8 +53,10 @@ namespace SHSCC.OPD.UI.Patient
             {
                 try
                 {
-                   
-                    PatientViewRequested?.Invoke(this,e.RowIndex+1);
+
+                    var regNo = senderGrid.Rows[e.RowIndex].Cells[0].EditedFormattedValue;
+
+                    PatientViewRequested?.Invoke(this,Convert.ToInt32(regNo));
                     //FrmAddNew frmAdd = new FrmAddNew(ok);
                     ////frmAdd.MdiParent = this;
                     ////frmAdd.WindowState = FormWindowState.Maximized;
